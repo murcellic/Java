@@ -1,0 +1,4373 @@
+// This is a comment for me and you, Java completely ignores it.
+// I use the comments to add useful notes and things to help you understand the code.
+
+/*
+ * This is a multi-line comment with no need to use the 
+ * forward slashes //
+ * Everything between / * and * / will be treated as a comment
+ */
+
+// The name of the class is the name of the recipe
+// Class name starts with uppercase-letter, and every word is then capitalized
+public class MyFirstClass { // This is the opening curly bracket of the class
+
+	// This is the main method (function), this is where everything starts.
+	// main is a method, its name starts with a lower-case letter.
+	public static void main(String[] args) { // This curly bracket is the beginning of the main method
+
+		// The main method is the list of the main instructions in the recipe
+
+		System.out.println("Hello Yoll Students!"); // This is the instruction similar to the instructions in the body
+													// of the recipe
+
+		// 1- Java is a case-sensitive language
+//		system.out.println("The s has to be uppercase!!!"); // If uncommented, it will give an error because of s.
+
+		// 2- Every statement ends with semicolon ; --> This applies to code lines
+		// inside the main method
+//		System.out.println("This line does not end with ;, it will give an error") // If uncommented, will give an error because of the missing ;
+
+		// No, this will be printed second because Java read left to right, top to
+		// bottom
+		System.out.println("This line should be printed first?!?!");
+
+	} // This curly bracket is the closing bracket of the main method
+
+} // This is the closing curly bracket of the class.
+
+		// sysout + crtl + space
+
+		// Using println() --> print the following and then move to a new line
+//		System.out.println("Dog");
+//		System.out.println("Cat");
+
+		// Using print() --> print the following and then wait for me at the end of the
+		// word for next instruction
+//		System.out.print("Cat");
+//		System.out.print("Dog");
+
+//		System.out.print("Cat");
+//		System.out.println("Dog");
+
+		System.out.println("Cat");
+		System.out.print("Dog");
+
+		
+		
+		// There is a third print statement called printf (we will not cover because we
+		// do not need it). It is used to print formatted output.
+		
+		// Escape (special) Characters
+		// Used to format output, and they are characters that are treated specially in
+		// Java and other languages
+		// They start with back-slash \
+
+		// \n --> New Line
+		// \t --> tab
+		System.out.print("Cat\n");
+		System.out.print("\tDog\n");
+
+		// \" --> "
+		System.out.println("Hamza said \"Welcome to Yoll!\"");
+
+		// \' --> '
+		System.out.println("\'n\'");
+
+		// \\ --> \ To print a single backslash, use \\
+		System.out.println("To add a new line, use \\n");
+
+		// Useful when we want to set a directory for a file
+		System.out.println("C:\\Users\\Desktop");
+		System.out.println("C:/Users/Desktop"); // Java accepts the / as a directory separator for windows just like MAC
+												// and Linux
+
+		System.out.println("Case ID \t\t Status");
+		System.out.println("--------------------------------");
+		System.out.println("1501 \t\t\t PASS");
+
+
+// Variable Declaration
+		int x;
+
+		// You can't use a variable that is only declared
+//		System.out.println(x); // x is recognized as a declared variable, but Java does not have a value for it.
+
+		// Assignment -> is to give a declared variable a value
+		x = 10;
+
+		System.out.println(x); // Now Java is ready to print x, because it recognizes it as an int variable,
+								// and knows its value as well.
+
+		// If you know the variable, and its value at the time of declaration, you may
+		// just declare + assign at the same time
+		int y = -1000; // Initialization = Declaration + Assignment
+
+		System.out.println("y"); // This will print y on the screen because of the ""
+		System.out.println(y); // This will print the value inside y the variable.
+
+
+a_type variable_name;
+		int age; // I declare a variable named age of data type int.
+
+		age = 20;
+
+		// I could do it as
+		// int age = 20;
+		System.out.println(age); // 20
+
+		// When you want to change the value inside a variable, you DO NOT re-declare a variable
+//		int age = 21; // This will not work because we have already declared age before.
+		
+		age = 21; // Re-assignment --> Giving a variable a different value.
+		System.out.println(age); // 21 because Java goes top to bottom
+
+
+// For any code to run: We have to Compile --> Run --> Check output
+		// There are three types of errors in Java code.
+		// 1- Syntax (compile-time) error - Violation of Java syntax, it is very easy to
+		// find and fix.
+
+		// int x = 5 // Missing a ; is an example of a compile-time error.
+
+		// Run-Time error --> The code compiles (it follows the syntax), but it crashes
+//		System.out.println(10 / 0); // It compiles, but when you run, it crashes
+
+		// Logical Error --> This is the worst, and the hardest to fix (The code
+		// compiles, the code runs, but the results are wrong)
+
+		// Add two numbers
+		System.out.println(10 - 5); // 5 does not match what I expected which is 15. Logical error! Messed up the
+									// mathematical operator.
+									
+									
+									
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+
+
+// Declare a variable count
+		int count;
+
+		// Print it. Any issues?
+		// System.out.println(count); // If uncommented, it will give an error because
+		// count was not assigned a value before.
+
+		// Assign a value 30 to it.
+		count = 30;
+
+		// Print it
+		System.out.println(count); // 30
+
+		// Change the value of the variable count to 45. (Re-assign value of 45 to
+		// count)
+		count = 45; // Remember, you can't say int count = 45; --> We can't re-declare
+
+		// Print it
+		System.out.println(count); // 45
+		
+		// Rules of naming our variables
+
+		// --------------
+		// Syntax Rules
+		// --------------
+
+		// 1- Variables can contain: letters (a-z, A-Z), numbers (0-9), _ , $
+
+		int x = 10;
+		int X = 1200; // This is different from the one above because Java is case-sensitive
+		int value = 5;
+		int value5505 = 50;
+		int min_value;
+		int amount$;
+
+		// Any other symbol other than _ and $ is not accepted.
+//		int location@;
+//		int taxRate%;
+//		int val-5;
+//		int max-val;
+
+		// 2- Variables naming cannot contain white spaces
+//		int max speed = 250;
+
+		// 3- Variable name can begin with special characters such as $ and _
+		int _val;
+		int $debt;
+		int $123;
+
+		// 4- Variables cannot begin with numbers
+//		int 5variables;
+		int val5times;
+
+		// ------------------------
+		// Naming Convention Rules --> Java will not complain, but your boss will
+		// ------------------------
+
+		// 1- Variable name should begin with a lowercase letter -- If you start with an
+		// upper case, Java will not complain.
+		int age = 30; // If you names Age, Java would not have complained about
+		System.out.println(age);
+
+		// 2- For lengthy variables names that has more than one word, use camelCase -
+		// start the second word with capital letter. -> Also any word that follows will
+		// be starting with capital
+		int myAge;
+		int taxRate;
+		int caTaxRate;
+
+		// 3- When creating variables, choose a name that makes sense.
+		int x;
+		int v;
+		int s;
+		int a;
+		int maxSpeed;
+
+
+//		Type speedLimit = 25;
+//		speedLimit = 25;
+
+//		Try printing ?
+//		System.out.println(speedLimit);
+
+//		int speedLimit = 25;
+		int speedLimit = 25;
+
+//		Try printing SpeedLimit ?
+//		System.out.println(SpeedLimit); // Error because S is uppercase
+
+//		Try printing speedlimit ?
+//		System.out.println(speedlimit); // Error because l is lowercase
+
+		System.out.println(speedLimit);
+		
+
+// Notes:
+
+		// 1- Pay attention to the error
+
+		// Declared but not initialized
+		int age;
+		System.out.println(age); // The local variable age may not have been initialized
+
+		// Not declared
+		int maxSpeed;
+		System.out.println(maxspeed); // maxspeed cannot be resolved to a variable
+
+		// 2- Can we name the variable as:
+		// a) Keyword
+
+//		int public; // This will not work.
+		int Public; // This will work, but discouraged --> Starts with capital (bad naming
+					// convention), and close to public
+
+		// b) Similar to class name?
+		int MyFirstClass; // You can, but really bad name. Never do that!
+		
+		
+		
+		// Primitive Data Types: boolean (notice all lower case)
+		boolean isHungry = true;
+		System.out.println(isHungry);
+
+		// A variable tvOn will be used to represent the status of a TV
+		// tvOn is true means tv is on
+		// tvOn is false means tv is off.
+		boolean tvOn = false; // The TV is off
+		System.out.println(tvOn);
+
+//		boolean awake = False; // If uncommented, will give an error because values can only be true or false
+		// case-sensitive
+
+		// You can declare and then assign in the future
+		boolean isThirsty;
+		isThirsty = true;
+
+		// You can't store different data types in boolean
+//		boolean data = 100; // If uncommented, will give an error because 100 is not true or false
+
+		// Default value: false --> This does not mean that declaring a boolean variable
+		// gives it the value false.
+		// The meaning of this will make sense in a future module.
+		boolean isTired;
+		System.out.println(isTired); // false?! Error!!!
+
+		// In general, the boolean variable is mostly used to represent a state, that is
+		// why I name the variables isXYZ
+		boolean state;
+		
+
+		/*
+		 * Declare a boolean variable and assign false
+		 * 
+		 * Print
+		 * 
+		 * Assign true to the variable
+		 * 
+		 * Print
+		 * 
+		 */
+		boolean isHungry;
+		isHungry = false;
+		System.out.println(isHungry);
+
+		isHungry = true;
+		System.out.println(isHungry);
+
+
+
+		// Primitive Data Types: byte
+		// 1 byte means 8 bits
+		// It can have values from -128 to 127. (2^8 numbers can be represented in
+		// binary)
+
+		byte num = 125;
+		System.out.println(num);
+
+		num = -128;
+		System.out.println(num);
+
+//		num = 128; // If uncommented, will give an error because 128 is beyond 127 which is the
+		// maximum number we can represent in a byte
+
+		// Default value: 0
+
+//		byte value;
+//		System.out.println(value); // Error
+
+
+
+//		Declare a byte variable with value 130
+//		Print
+
+//		byte num = 130; // Greater than 127
+//		System.out.println(num);
+
+//		Declare a byte variable with value 200 
+//		Print
+//		byte nums = 200;// Greater than 127
+//		System.out.println(nums);
+
+//		Declare a byte variable with value -3
+//		Print
+		byte numbers = -3;
+		System.out.println(numbers);
+		
+		
+		
+		// Primitive Data Types: short (2 bytes = 16 bits)
+		// -32,768 --> +32,767
+
+		short num = 32000;
+		System.out.println(num);
+
+		num = -32768;
+		System.out.println(num);
+
+//		num = -32769;
+//		num = 32800;
+
+
+
+
+		// Why use byte if we have short?
+		// Represent 1000000 that are in the range of -100 and 100
+		// If I use byte, I need 1,000,000 bytes
+		// If I use short, I need 2,000,000 bytes.
+		//	Declare a variable with value 680
+		//	Print
+		short num = 680;
+		System.out.println(num);
+
+		// Declare a variable with value 55000
+		// Print
+//		short num1 = 55000;
+//		System.out.println(num1);
+
+		// Declare a variable with value -39000
+		// Print
+//		short num2 = -39000;
+//		System.out.println(num2);
+		// Primitive Data Types: int (4 bytes = 32 bits)
+		// The int data type can have values from -2,147,483,648 to 2,147,483,647
+		// This is most common number data type to use
+
+		int numberOfPens = 45000;
+		System.out.println(numberOfPens);
+
+		numberOfPens = 2147483647;
+		System.out.println(numberOfPens);
+
+//		numberOfPens = 3147483647; // The literal 3147483647 of type int is out of range
+//		System.out.println(numberOfPens);
+
+		// What is a literal?
+		// We have literals and variables.
+		// literals are any values that are hardcoded in our code.
+		int x = 10; // 10 is an int literal
+		System.out.println("This is so much fun!"); // "This is so much fun!" is a String literal
+
+		System.out.println(15250);
+		System.out.println(x);
+		System.out.println(true); // boolean literal
+
+		// We use literals to build variables.
+
+//		Declare an int  variable with value 680
+//		Print
+		int value = 680;
+		System.out.println(value);
+
+//		Declare an int variable with value 22.54
+//		Print
+//		int value1 = 22.54;
+//		System.out.println(value1);
+
+//		Declare an int variable with value -33.45
+//		Print
+//		int value2 = -33.45;
+//		System.out.println(value2);
+
+		// Primitive Data Types: long (8 bytes = 64 bits)
+
+		long num = 2147483647;
+		System.out.println(num);
+
+		num = 15000;
+		System.out.println(num);
+
+//		long number = 2147483648; // ERROR?! The literal 2147483648 of type int is out of range
+
+		// JAVA TREATS INTEGER LITERALS AS THE TYPE int BY DEFAULT
+
+		// Since Java treats every integer literal as an int, it does not accept the
+		// number 2147483648 as an int literal because it is beyond the range of int.
+
+		// Notice that the problem has nothing to do with the variable number which is
+		// of type long and capabale of storing the value on the right hand side
+
+		// To get around this, we have to tell Java explicitly to treat the literal as a
+		// long literal instead of int literal.
+
+		// How can we do that? Add a l (L lower case) or L (L uppercase) after your
+		// literal --> Usually L is used since l looks like 1.
+
+		long number = 2147483648L;
+		System.out.println(number);
+
+		long val = 6546543413434335433L;
+		System.out.println(val);
+
+		long balance = 50000L; // The use of L here is redundant
+
+		// Looking back, this is the reason why we get this error with byte
+
+//		byte x = 130; // Greater than 127, look at the error:  Type mismatch: cannot convert from int to byte
+		// Because 130 is beyond the byte range, Java treats the 130 as an int literal
+		
+		/*
+		 * Please swap the values of a and b.
+		 * 
+		 * int a=10;
+		 * 
+		 * int b=20
+		 * 
+		 */
+		int a = 10;
+		int b = 20;
+
+		// Mistake
+//		a = b;
+
+		// Mistake
+//		a = 20;
+//		b = 10;
+
+		// Solution --> Dynamic solution that works with any values of a and b
+		int c;
+		c = a;
+		a = b;
+		b = c;
+
+		System.out.println(a);
+		System.out.println(b);
+		
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+
+
+
+		// Primitive Data Types : Floating Point
+
+		// You should not use float or double with monetary applications in real-life.
+		// However, in class and homework examples, it is ok to use them.
+
+		// float (4 bytes) --> 3.4e-038 to 3.4e+038 --> Using the single-precision
+		// representation
+
+//		int x = 1.5; // Type mismatch: cannot convert from double to int
+
+//		float num = 1.5; // Type mismatch: cannot convert from double to float
+
+		// Java treats any floating point LITERAL as a double not float
+
+		// To solve this problem we need to add an f or F after the number
+
+		float number = 1.5f;
+		System.out.println(number);
+
+//		float x = (float)(1.0/3);
+//		System.out.println(x);
+//		
+//		System.out.println(1.0/3);
+
+		// double (8 bytes)
+		double num = -15.2;
+		System.out.println(num);
+		
+		
+		// Why should not we use float and double in monetary applications?
+
+		double a = 0.03;
+		double b = 0.04;
+		double c = b - a;
+
+		System.out.println(c); // 0.010000000000000002 instead of 0.01
+		
+		double num = 34;
+		System.out.println(num);
+
+		// Since Java treats floating-point literals as double, you do not need to add
+		// the d or D
+		num = 245.943;
+		System.out.println(num);
+		num = 245.943D;
+		System.out.println(num);
+		num = 245.943d;
+		System.out.println(num);
+		
+		// char --> Unicode
+		char letter = 'a';
+		System.out.println(letter);
+
+		// Notice how we use single quotes with char compared to the double quites with
+		// String
+		System.out.println("The String uses double quotes");
+
+		letter = '4';
+		System.out.println(letter);
+
+		letter = '!';
+		System.out.println(letter);
+
+		letter = ' ';
+		System.out.println(letter);
+
+		letter = '\n'; // Escape characters - Java treats them as A CHARACTER
+		System.out.println(letter);
+	
+
+
+
+
+
+	
+		// String
+		System.out.println("Welcome to Yoll!"); // This an example of String literal
+		System.out.println("Apples");
+		System.out.println("I love Apples");
+		System.out.println("A"); // String literal that contains one character
+
+		// How can we create String reference variables?
+		String name = "Yoll Academy";
+		System.out.println(name);
+		
+		
+		// Concatenation of Strings (+)
+
+		System.out.println(10 + 5);
+		System.out.println("10 + 5");
+
+		// The + operator is used for adding numbers, and it can also be used to
+		// concatenate Strings
+		System.out.println("This is a very long String, so I have " 
+						+ "to break it into two Strings and then concatenate them.");
+
+		// This means, we can also use it to concatenate Strings with variables
+		int apples = 100;
+
+		System.out.println("I have " + apples + " apples");
+
+		double balance = 100.5;
+		System.out.println("I have $" + balance);
+		
+		
+		
+		// Lets take another example:
+
+		String num = "200";
+		int myNum = 200;
+
+		System.out.println(num);
+		System.out.println(myNum);
+
+		System.out.println(myNum + 100); // myNum is an int, 100 is treated as an int literal, and summation is done
+
+		System.out.println(num + 100); // 200100 --> The 100 will be converted to a String, because num is a String,
+										// and then concatenated to the num
+
+		String str = "I have ";
+		System.out.println(str + 100);
+		
+import java.util.Scanner; // We are telling Java to import the Scanner class from the Utility package that comes with Java
+
+public class DataInputDemo {
+
+	public static void main(String[] args) {
+
+		System.out.println("Welcome to Yoll!");
+
+		// System.in --> Has a problem, it is very weak and can only read one byte
+		// This is not going to be very helpful because we want to read, byte, short,
+		// int, long, float, double, String
+
+		// To solve this problem, we need to give System.in a super-hero suit similar to
+		// iron-man
+
+		// That suit is called Scanner object --> From its name, Scanner can help SCAN
+		// the input instead of reading one character at a time
+
+		// Three steps to get this done
+
+		// 1- Step number 1 is to import the Scanner class that comes with Java to our
+		// code
+		// so we can use it. --> See line 1
+
+		// 2- Create a Scanner object and put System.in inside it
+		Scanner input = new Scanner(System.in);
+
+		// 3- Use the Scanner object input to read input from keyboard.
+		System.out.println("Enter your number: ");
+		int number = input.nextInt();
+
+		System.out.println("Your number is: " + number);
+	}
+
+}
+
+import java.util.Scanner;
+
+public class DataInputDemo {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		// int
+		input.nextInt();
+
+		// byte
+		input.nextByte();
+
+		// short
+		input.nextShort();
+
+		// long
+		input.nextLong();
+
+		// float
+		input.nextFloat();
+
+		// double
+		input.nextDouble();
+
+	}
+
+}
+
+import java.util.Scanner;
+
+public class DataInputDemo {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("enter a number: "); // A prompt to know what am I being asked to enter
+		int num = input.nextInt();
+
+		System.out.println(num + 100);
+		
+	}
+
+}
+
+		// 1- You can call your Scanner object, whatever you want.
+		// scan, input, kb, keyboard
+
+		// 2- You only need one Scanner object at the top of your main method to take as
+		// many inputs as you want.
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Enter your age: ");
+		int age = input.nextInt();
+
+		System.out.println("Enter your stipend: ");
+		double stipend = input.nextDouble();
+
+		System.out.println("Your age is: " + age);
+		System.out.println("Your stipend is: $" + stipend);
+		
+		Scanner input = new Scanner(System.in);
+
+		// How can we read a String?
+
+		System.out.println("Enter your name: ");
+		String name;
+
+		// There are two methods to read a String
+
+		// next() --> Reads one word until the next space
+
+//		name = input.next();
+//		System.out.println("Your name is: " + name);
+//
+//		name = input.next(); // Will read the next word
+//		System.out.println("Your name is: " + name);
+
+		// nextLine() -- Reads the whole line as a Single String
+		name = input.nextLine();
+		System.out.println("Your name is: " + name);
+		
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Enter your first name: ");
+		String fName = input.next();
+
+		System.out.println("Enter your last name: ");
+		String lName = input.next();
+
+		System.out.println("Nice to meet you " + fName + " " + lName);
+		
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("What is your age: ");
+//		int age = input.nextDouble(); // Type mismatch: cannot convert from double to int
+
+
+		Scanner input = new Scanner(System.in);
+		/*
+		 * Write a program that prints in screen:
+		 * 
+		 * Welcome. Enter a number:
+		 * 
+		 * Next enter value in console
+		 * 
+		 * Program should print:
+		 * 
+		 * You Entered:
+		 * 
+		 * <entered value>
+		 * 
+		 */
+		System.out.println("Welcome. Enter a number:");
+		int num = input.nextInt();
+
+		System.out.println("You entered: ");
+		System.out.println(num);
+		
+		
+		Scanner scan = new Scanner(System.in);
+
+//			Prints on screen: 
+//			Please Enter your name: 
+		System.out.println("Plesae enter your name: ");
+		String name = scan.nextLine();
+
+//			Please enter the price of your first item:
+//			Enter value in console in format of dollars and cents.
+		System.out.println("Please enter the price of your first item: $");
+		double price1 = scan.nextDouble();
+
+//			Please enter the price of your second item: 
+//			Enter value in console in format of dollars and cents.
+		System.out.println("Please enter the price of your second item:");
+		double price2 = scan.nextDouble();
+
+//			Print:  
+//			Thank you <Your name>. 
+//			First item price: <price1>
+//			second item price: <price2>			(Hint: use .nextDouble() and next())
+		System.out.println("Thank you " + name);
+		System.out.println("First item price: $" + price1);
+		System.out.println("Second item price: $" + price2);
+		
+
+
+		Scanner scan = new Scanner(System.in);
+
+		// If you read any primitive data type using Scanner before nextLine, you will
+		// get a behavior where Java will not let you enter the String
+
+		System.out.println("Enter your age: ");
+		int age = scan.nextInt();
+
+		// To solve this problem, either read the line before the primitive, or use a
+		// decoy nextLine()
+		// Add a decoy (dummy) nextLine to delete the enter
+		scan.nextLine();
+
+		System.out.println("Enter your name: ");
+		String name = scan.nextLine();
+
+		System.out.println("Hello " + name + " you are " + age + " years young!");
+		
+		
+		// This problem occurs everytime you read a primitive before a nextLine
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Are you happy? (true or false)");
+		boolean mood = scan.nextBoolean();
+
+		scan.nextLine();
+
+		System.out.println("Enter your name: ");
+		String name = scan.nextLine();
+
+		System.out.println(mood + " " + name);
+		
+		
+		Scanner scan = new Scanner(System.in);
+
+		// Similar behavior will occur if you have a next before a nextLine
+		System.out.println("Enter your name: ");
+		String name = scan.next();
+
+		// Use a dummy nextLine() to flush the rest of the previous input
+		scan.nextLine();
+
+		System.out.println("Enter your hobby: ");
+		String hobby = scan.nextLine();
+
+		System.out.println("Hello " + name + " your hobby is: " + hobby);
+		
+		// Addition (+)
+
+		int a = 10;
+		int b = 20;
+
+		int c = a + b;
+
+		System.out.println(c);
+		System.out.println(a + b);
+
+		b = 100; // Changing b does not change c, Java reads top to bottom
+
+		System.out.println(c); // 30
+
+		System.out.println(c + 200); // 230
+		
+		
+// Remember, + can also be used for concatenation
+
+		int a = 10;
+		int b = 20;
+						// String + number + number
+		System.out.println("a + b = " + a + b); // a + b = 1020
+		
+		// 				number + number + String
+		System.out.println(a + b + " = a + b"); // 30 = a + b
+
+
+
+
+
+		// Subtraction (-)
+		System.out.println(100 - 50);
+
+		int a = 50;
+		int b = 200;
+		System.out.println(a - b);
+
+		int c = 200 - a;
+		System.out.println(c);
+		
+		
+		
+		//		Add 765 and 234 and print their result
+		System.out.println(765 + 234);
+
+//		Declare 2 variables with values of 248 and 391.
+//		Add those values and print.
+		int a, b;
+		a = 248;
+		b = 391;
+		System.out.println(a + b);
+
+//		Subtract those values and print. 
+		System.out.println(a - b);
+
+//		Declare 3 variables 129.44, 94, 82
+//		Add first 2 variables and subtract third
+//		Print result
+
+		double x = 129.44;
+		int y = 94, z = 82;
+
+		System.out.println(x + y - z);
+		
+
+		// No Math operations for byte and short
+		byte b1 = 3;
+		byte b2 = 5;
+
+//		byte b3 = b1 + b2; // Type mismatch: cannot convert from int to byte
+		// This means that Java when adds two bytes, it converts them to int
+
+		int b4 = b1 + b2; // It is happy because b1 + b2 is int not byte
+
+		short s1 = 15;
+		short s2 = 20;
+
+		System.out.println(s1 - s2);
+
+//		short s3 = s1 - s2;// Type mismatch: cannot convert from int to short
+		int s4 = s1 - s2;
+		
+		
+
+
+
+
+
+
+
+
+
+	System.out.println(127 % 5); // 2
+		System.out.println(-171 % 8); // -3
+		
+		
+int num = 10;
+		
+		System.out.println("The number is: " + num + num);
+		System.out.println(num + num + " is the number.");
+
+int num = 10;
+		System.out.println(100 - num);
+
+		
+		// Not math in Java for byte and short
+		byte x = 1;
+		byte y = 2;
+
+//		byte z = x + y;
+		System.out.println(x + y);
+		// Multiplication (*)
+		System.out.println(10 * 10);
+
+		int a = 20;
+		int b = 4;
+
+		int c = a * b;
+
+		System.out.println(c);
+		// Remember, no math operations for byte and short.
+		byte a = 10;
+		byte b = 2;
+
+		byte c = a * b; // This will give an error.
+		// Division (/)
+
+		int a = 8;
+		int b = 4;
+
+		int c = a / b;
+
+		System.out.println(c);
+		
+// Integer Division --> Java will omit the fraction since we are dividing an
+		// int by int.
+		int a = 10;
+		int b = 4;
+
+		System.out.println(a / b);
+
+		// Will this solve the problem? --> Because integer division happens first, then
+		// the result is stored as a double, so the 2 as a double will be 2.0
+		double c = a / b;
+		System.out.println(c);
+
+		// How to solve it? --> Make at least one of the operands a double
+		System.out.println(10.0 / 4);
+		System.out.println(10 / 4.0);
+		System.out.println(10.0 / 4.0);
+
+		// What if they are variables, not literals?!
+		double k = 10.0;
+		System.out.println(k / 4);
+
+		// But what if both variables are integers?
+		System.out.println(1.0 * a / b);
+
+		int a = 10;
+		int b = 4;
+
+		// If an integer is involved in a mathematical operation with a double, it will
+		// be upgraded to become a double
+
+		System.out.println(10 * 1.0); // 10.0
+
+		System.out.println(1.0 * a / b); // This becomes double divided by an integer. --> 2.5
+
+		// Task 4
+//		Multiply 25 and -4, and print the result.
+		System.out.println(25 * -4);
+
+//		Declare 2 variables with values of 400 and 25.
+		int a = 400;
+		int b = 25;
+
+//		Multiply those values and print.
+		System.out.println(a * b);
+
+//		Divide those values and print. 
+		System.out.println(a / b);
+
+//		Declare 3 variables 120.25, 4, 65
+//		Multiply  first 2 variables and divide third
+//		Print result
+		double num1 = 120.25;
+		int num2 = 4;
+		int num3 = 65;
+
+		System.out.println(num1 * num2 / num3);
+		
+		// Modulo (modulus) %
+		System.out.println(10 % 4);
+		System.out.println(11 % 4);
+
+		// Even or Odd
+		System.out.println(0 % 2); // 0
+		System.out.println(1 % 2); // 1
+		System.out.println(2 % 2); // 0
+		System.out.println(3 % 2); // 1
+		System.out.println(4 % 2); // 0
+		System.out.println(5 % 2); // 1
+
+		// You can use it with variables
+		int a = 10;
+		int b = 3;
+		int x = a % b;
+		System.out.println(x);
+		
+		System.out.println(127 % 5); // 2
+		System.out.println(-171 % 8); // -3
+		
+
+
+
+
+
+//		Write a Java program that accepts temperature in Fahrenheit:  (For example 75)
+//		Use Scanner
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter the temperature degree in Fahrenheit: ");
+		int fahrenheit = scan.nextInt();
+
+//		Then converts 75 Fahrenheit to Celsius degree. 
+//		Formula: Celsius = (Fahrenheit − 32) × 5/9
+
+		double celsius = (fahrenheit - 32.0) * 5 / 9;
+
+//		Then print result like: (Use variables). 
+//		 "75 fahrenheit is  23.8889 celsius"
+		
+		System.out.println(fahrenheit + " fahrenheit is " + celsius + " celsius.");
+		
+		// Notes:
+
+		// 1- Where is the E in PEMDAS --> The E comes from a class called Math which
+		// comes with Java
+		// Java comes with a utility class called Math that has all the useful constants
+		// and advanced functions for Math
+
+		System.out.println(Math.pow(5, 2)); // Power method will calculate 5 to the power 2
+		System.out.println(Math.sqrt(100));
+		System.out.println(Math.PI);
+
+		// 2- PEMDAS and Concatenation
+		int a = 10;
+		int b = 5;
+		
+		System.out.println("a + b = " + (a + b));
+		
+//		Shopping List:
+//		    Tomatoes
+//		    Potatoes
+//		    Apple
+//		    Organic "Cage-Free" eggs
+//		    Cranberry
+
+		System.out.println("Shopping List:\n\tTomatoes\n\tPotatoes\n\tApple\n\tOrganic \"cage-free\" eggs\n\tCranberry");
+		
+		
+		// Round Up
+		double num = 56.5567;
+
+//		long roundedNum = Math.round(num);
+//		System.out.println(roundedNum);
+
+		System.out.println(Math.round(num));
+		
+		
+// Round Up
+		double num = 56.5567;
+
+//		num = num * 100;
+//		System.out.println(num);
+//
+//		num = Math.round(num);
+//		System.out.println(num);
+//
+//		num = num / 100.0;
+//		System.out.println(num);
+
+		System.out.println(Math.round(num * 100) / 100); // int division
+
+		System.out.println(Math.round(num * 100) / 100.0);
+		
+		
+		Scanner scan = new Scanner(System.in);
+
+		double celsius, fahrenheit;
+		System.out.println("Please enter temperature degree in Fahrenheit: ");
+		fahrenheit = scan.nextDouble();
+		celsius = (fahrenheit - 32) * 5 / 9;
+		
+		celsius = Math.round(celsius * 100) / 100.0;
+
+		System.out.println(fahrenheit + " fahrenheit is " + celsius + " celsius.");
+		
+		// Task 8
+
+		// Code by: Valery
+
+//		Write a program that prints in screen: 
+//			Welcome. Enter a decimal number: 
+//			Next enter value in console (For example: 24.534534)
+//			Program should print: 
+//			Your number is rounded as: <entered value with 2 decimal points: 24.53> 
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Welcome. Enter a decimal number: ");
+		double num = input.nextDouble();
+
+		System.out.println("Your number is rounded as: " + Math.round(num * 100) / 100.0);
+		
+		
+		Scanner scan = new Scanner(System.in);
+
+		double rate = 4.5; // The price of shipment per pound
+
+		// Ask user for their name.
+		System.out.println("Please enter your name: ");
+		String name = scan.nextLine();
+
+//		Ask user to enter how many pounds does their shipment weigh?
+		System.out.println("What is the weight of your shipment (lbs)?");
+		double weight = scan.nextDouble();
+
+//		Calculate the total shipping cost for the user.
+
+		double total = rate * weight;
+
+//		Print the receipt in this example format:
+//			Thank you Brian for shopping at Fedex. Your total today is: $20.0
+//		Notes: The name Brian and the cost 20.0 will vary depending on the input
+
+		System.out.println("Thank you " + name + " for shipping with FedEx. Your total today is: $"
+				+ Math.round(total * 100) / 100.0);
+				
+
+		Scanner scan = new Scanner(System.in);
+
+//		You work at the clothing store. Write a program that prints in screen: 
+//			Please Enter Customer Name: 
+		System.out.println("Please enter your name: ");
+		String name = scan.next();
+
+//			Please enter the price of your item:
+//		Next enter value in console in format of dollars and cents.
+
+		System.out.println("Please enter the price of your item: $");
+		double price = scan.nextDouble();
+
+//			Please enter the discount percentage. (for example, 5,10,20,50 etc.) 
+		System.out.println("Please enter the discount percentage: ");
+		int discountRate = scan.nextInt();
+
+//			Calculate total for the customer, including the discount.
+		double discount = (discountRate / 100.0) * price;
+		double total = price - discount;
+
+//			Print:  Thank you <Your name>. Your total after discounts is: <total price after discount>  
+//			(Hint: use .nextDouble() and next())
+
+		System.out.println("Thank you " + name + ". Your total after discount is: $" + total);
+		
+		
+		int x = 5;
+
+		// Update of the value x
+
+//		// Increment x by 1
+//		x = x + 1;
+//
+//		// Decrement x by 2
+//		x = x - 2;
+
+		// Assignment Operators =
+
+		int apples = 5;
+
+		// +=
+		apples += 10; // We are asking Java to add 10 to apples and then put the result back in apples
+		// apples = apples + 10;
+		System.out.println(apples);
+
+		// -=
+		apples -= 5;
+		System.out.println(apples);
+
+		// /=
+		apples /= 2;
+		System.out.println(apples);
+
+		// *=
+		apples *= 5;
+		System.out.println(apples);
+
+		// %=
+		apples %= 3;
+		System.out.println(apples);
+		
+		
+		int apples = 10;
+
+//		apples = apples / 4.0; // If uncommented, will give an error because result is double can't be stored in int
+
+		apples /= 4.0; // This one will not give an error, but it won't give 2.5, instead it will be an
+						// int division
+
+		System.out.println(apples);
+		
+		
+
+		int num = 2345;
+
+//		Write a program to add 8 to the number 2345 
+
+		num += 8;
+
+		// and then divide it by 3.
+		num /= 3;
+
+//		Now, do modulus 5 of the result 
+		num %= 5;
+
+//		and then multiply the result by 5. 
+		num *= 5;
+
+//		Display the final result.
+		System.out.println(num);
+		
+		
+		
+		// Unary Operators
+
+		// Auto Update (Increment/Decrement) --> Increment or decrement a variable by 1
+
+		int a = 1;
+
+		// Increment a by 1
+//		a = a + 1;
+//		a += 1;
+
+		a++; // Increment a by 1
+		System.out.println(a);
+
+		++a; // Does the same thing
+		System.out.println(a);
+
+		// Decrement
+		a--;
+		System.out.println(a);
+
+		--a;
+		System.out.println(a);
+		
+		
+		
+		int a = 1;
+
+		// In this specific scenario, there is no difference between a++ and ++a
+		// THis is because each one of them is done INDEPENDENTLY ON A SEPARATE LINE
+//		a++;
+//		System.out.println(a);
+//
+//		++a;
+//		System.out.println(a);
+
+		// The difference becomes clear when this update is combined with other
+		// operations.
+
+		// When we have mixed operation like this where we want to print and increment,
+		// the question is, which one should I do first? Increment/DEcrement or print?
+
+		// println(x++) or println(x--) --> Here I ask Java to print first, then update
+		// next
+		// println(++x) or println(--x) --> Here I ask Java to update first, and then
+		// print the updated copy
+
+		int x = 10;
+		
+		System.out.println(x++); // Because what we are saying is print x, THEN increment x by 1
+		System.out.println(x); // 11
+
+		System.out.println(++x); // Increment x first, then print - 12
+
+		System.out.println(--x); // 11
+		System.out.println(x--); // 11
+		System.out.println(x); // 10
+		
+		
+		
+		int a = 10;
+		int b = 10;
+
+		// In this kind of equations, we are asking, should I update the value first or
+		// should I plug the value in the equation first.
+
+		System.out.println(a++ + ++a); // 10 + 12
+		System.out.println(a);// 12
+
+		System.out.println(a-- - --a); // 12 - 10
+
+		System.out.println(b++ + b++);
+
+		System.out.println(b); // 12
+		
+		
+		
+		// Unary Operator - Negation (!) - The NOT operator
+
+		boolean isTired = false;
+
+		System.out.println(isTired); // false
+		System.out.println(!isTired); // true
+		
+		
+		
+		// Relational Operators - Relation between two operands - They are Binary
+		// operators
+
+		System.out.println(10 > 2); // Equivalent to asking Java to print the logical answer of : is 10 greater than
+									// 2?
+
+		System.out.println(10 < 2); // false
+
+		System.out.println(10 < 100); // true
+		System.out.println(10 < 10); // false
+
+		System.out.println(10 <= 10); // true - Remember, we check if 10 is less than OR equal, and it is equal
+
+		System.out.println(20 >= 2); // true
+
+		// When we check if two numbers are equal, we have to use ==
+		System.out.println(10 == 10); // true - Asking is 10 equal to 10.
+		System.out.println(10 == 9); // false
+
+		// Do not confuse it with the assignment operator =
+
+		System.out.println(10 != 9); // true
+		System.out.println(10 != 10); // false
+
+		// Notes:
+
+		// 1- There is no such thing as !>, !<, !>=
+
+		System.out.println(10 > 2); // true
+		System.out.println(!(10 > 2));
+		// Remember that is 10 not greater than 2 is equivalent to asking if 10 less
+		// than or equal to 2
+
+		// 2- All of this can work with variables
+		int tankCapacity = 10;
+		int gasLevel = 11;
+
+		boolean isTankFull = gasLevel >= tankCapacity;
+
+		System.out.println(isTankFull);
+		
+
+
+
+		
+		
+		System.out.println(2 * 50 + 34 > 12 * 4);
+		System.out.println(12 + 4 <= 11 + 5);
+		System.out.println(83 * 421 == 77 * 111 + 999);
+		System.out.println(121 != (110 + 11));
+		
+		
+		
+		// Logical Operators - Used to combine multiple boolean expressions
+		// We have two common logical operators AND (&&) and OR (||)
+		
+		// I will go to the picnic if I finish my codeboard.
+		// Finished Codeboard     |    Going to Picnic
+		//       true             |        true
+		//       false            |        false   
+
+		boolean finishedCodeboard;
+		boolean notRaining;
+		
+		// I will go to the picnic if I finish my codeboard AND it is not raining
+		//  Finished Codeboard        |    Is not Raining?    |      Going to picnic
+		//       false                |        false          |           false
+		//       false                |         true          |           false
+		//       true                 |         false         |           false
+	 	//       true                 |         true          |           true
+		finishedCodeboard = false;
+		notRaining = false;
+		
+		System.out.println(finishedCodeboard && notRaining);
+		
+		finishedCodeboard = false;
+		notRaining = true;
+		
+		System.out.println(finishedCodeboard && notRaining);
+		
+		
+		finishedCodeboard = true;
+		notRaining = false;
+		
+		System.out.println(finishedCodeboard && notRaining);
+		
+		
+		finishedCodeboard = true;
+		notRaining = true;
+		
+		System.out.println(finishedCodeboard && notRaining);
+		
+		
+		// I will go to the picnic if I finish my codeboard OR it is not raining
+		//  Finished Codeboard        |    Is not Raining?    |      Going to picnic
+		//       false                |        false          |          false           
+		//       false                |         true          |          true    
+		//       true                 |         false         |          true 
+		//       true                 |         true          |          true 
+		finishedCodeboard = false;
+		notRaining = false;
+		
+		System.out.println(finishedCodeboard || notRaining);
+		
+		finishedCodeboard = false;
+		notRaining = true;
+		
+		System.out.println(finishedCodeboard || notRaining);
+		
+		
+		finishedCodeboard = true;
+		notRaining = false;
+		
+		System.out.println(finishedCodeboard || notRaining);
+		
+		
+		finishedCodeboard = true;
+		notRaining = true;
+		
+		System.out.println(finishedCodeboard || notRaining);	
+		
+		
+		// Logical operators join two logical expressions
+
+		System.out.println((10 > 2) || (5 != 5));
+		                    // true || false -> true
+
+		System.out.println(10 * 2 > 22 && 80 < 120);
+		             //        false   &&   true  -> false 
+					 
+					 
+					 
+		// 1- There is not such thing as !&& or !||
+
+		boolean b1 = true;
+		boolean b2 = false;
+
+		System.out.println("b1 && b2: " + (b1 && b2));
+		System.out.println("b1 || b2: " + (b1 || b2));
+
+		// Remember, unary operator not (!) --> != means not equal
+		// Not (!) b1 && b2
+		System.out.println("!(b1 && b2): " + !(b1 && b2));
+
+		boolean cupFull = false;
+		// if empty, dispense coffee
+		System.out.println(!cupFull);
+
+		// 2- Combining multiple operations
+
+		int num1 = 1, num2 = 5, num3 = 9;
+		boolean result = num1 < num2 && num2 < num3;
+		System.out.println(result);
+
+		int num4 = 0;
+		System.out.println(num1 < num2 && num2 < num3 && num3 < num4);
+		
+		
+		
+		int number = 10;
+		System.out.println(8 < 5 && number++ > 7); // Logical && Operator
+		System.out.println(number); // 10
+
+		int num = 10;
+		System.out.println(8 < 5 & num++ > 7); // Bitwise & Operator
+		System.out.println(num); // 10
+
+		// Short-circuit - When Java finds an expression that has logical && operator
+		// and the first expression is false, it DOES NOT evaluate the second expression
+
+		// In the following situation, finding the first expression being true means
+		// that we WILL calculate the second one because there is a possibility that it
+		// will also be true
+		int x = 15;
+		System.out.println(number++ > 7 && x++ < 5);
+		System.out.println(x); // 16
+		
+		
+		// Logical Or || vs. bitwise or |
+
+		int value = 4;
+		System.out.println(10 > -10 || value++ > 7); // true
+		System.out.println(value); // 4
+
+		int val = 4;
+		System.out.println(10 > -10 | val++ > 7); // true
+		System.out.println(val); // 5
+
+		// In case of logical expressions joined with ||, if the first expression is
+		// true, then true OR anything is always true, and Java will perform
+		// short-circuit and will not evaluate the second expression
+
+		int x = 4;
+		int y = 2;
+		System.out.println(x++ > 7 || y++ > -10);
+		System.out.println(y);
+		
+		
+		
+		// Logical vs bitwise difference
+		// Bitwise operators can be used with numbers
+
+//		System.out.println(5 && 2); // If uncommented, will give an error because the operands are not boolean
+
+		System.out.println(5 & 2); // 0
+		System.out.println(5 & 7); // 7
+		
+		
+		// String to int/double
+
+		String text = "200";
+
+//		int total = 10 + text;
+		String str = 10 + text;
+
+		System.out.println(str);
+
+		// Method 1: Integer.parseInt() -- This returns an int
+		int total = 10 + Integer.parseInt(text);
+		System.out.println(total);
+
+		// Method 2: Integer.valueOf() -- This one returns an Integer object
+		int num = 50 + Integer.valueOf(text);
+		System.out.println(num);
+
+		// In case of int, if the String has space, decimal point, or any other
+		// characters, it will not be converted and it will give an error
+		
+		
+		// String to double
+
+		String text = "200.54";
+
+//		double total = 50 + text;
+
+		// Method 1: Double.parseDouble()
+		double total = 50 + Double.parseDouble(text);
+		System.out.println(total);
+
+		// Method 2: Double.valueOf()
+		double sum = 20.5 + Double.valueOf(text);
+		System.out.println(sum);
+
+		text = "20";
+		System.out.println(15 + Double.parseDouble(text));
+		
+		
+		
+		// byte --> Byte
+		// short --> Short
+		// int --> Integer
+		// long --> Long
+		// double --> Double
+		// float --> Float
+		// boolean --> Boolean
+		// char --> Character
+
+		// String to double
+
+		String text = "200.54";
+
+//		double total = 50 + text;
+
+		// Method 1: Double.parseDouble()
+		double total = 50 + Double.parseDouble(text);
+		System.out.println(total);
+
+		// Method 2: Double.valueOf()
+		double sum = 20.5 + Double.valueOf(text);
+		System.out.println(sum);
+
+		text = "20";
+		System.out.println(15 + Double.parseDouble(text));
+		
+		
+		// int/double to String
+
+		// Method 1: String.valueOf()
+		int numI = 100;
+		String numS = String.valueOf(numI);
+
+		System.out.println(numS + 200);
+
+		double numD = 100.25;
+		System.out.println(String.valueOf(numD) + 200);
+
+		// method 2: DataType.toString()
+		System.out.println(Integer.toString(numI) + 2525);
+		System.out.println(Double.toString(numD) + 15.15);
+
+		// Method 3: Concatenate
+		String numString = "" + numI;
+		
+		
+		
+		int a = 5;
+		String converted = String.valueOf(a);
+
+		System.out.println(a + 100); // int + int is int --> 105
+		// What will it print?
+
+		System.out.println(converted + 100); // String + int is concatenation --> 5100
+		// What will it print?
+		
+		
+		
+		// Code by: Aykhan Aslanli
+
+		// Create integer variable with value 55
+		int a = 55;
+
+		// Convert to String
+		String b = String.valueOf(a);
+		System.out.println(b);
+
+		// Create double value with value 99.99
+		double c = 99.99;
+
+		// Convert to String
+		String d = String.valueOf(c);
+
+		// After conversion, Print: 5599.99 using the variables.
+		System.out.println(b + d);
+		
+		
+		// boolean to String
+
+		// Method 1: String.valueOf()
+		boolean a = true;
+		String converted = String.valueOf(a);
+		System.out.println(converted);
+
+		// Method 2: Boolean.toString()
+		String convert = Boolean.toString(a);
+		System.out.println(convert);
+
+		// Method 3:
+		System.out.println("" + a);
+		
+		
+		// String to boolean
+
+		String x = "true";
+		boolean xB = Boolean.valueOf(x);
+		System.out.println(xB && false); // false
+
+		xB = Boolean.parseBoolean(x);
+		System.out.println(xB && false); // false
+
+		// Both of them ignore case
+		String y = "TRUE";
+		System.out.println(Boolean.parseBoolean(y)); // true not TRUE
+		System.out.println(false && Boolean.parseBoolean(y));
+
+		y = "TrUe";
+		System.out.println(false && Boolean.valueOf(y));
+
+		// If the content of the String is anything else other than ture or false (with
+		// varying cases), it will always be converted to a false
+
+		String test = "TrUE";
+		System.out.println(Boolean.valueOf(test)); // true
+
+		test = "Trueeees";
+		System.out.println(Boolean.valueOf(test));// false
+		System.out.println(Boolean.parseBoolean(test)); // false
+		
+		
+		Scanner scan = new Scanner(System.in);
+
+//		Ask user to enter number.
+		System.out.println("Please enter a number: ");
+
+//		Receive number as String.
+		String numS = scan.next();
+
+//		Convert String into integer.
+		int num = Integer.parseInt(numS);
+
+		// Add 100 to the number
+		num += 100;
+
+//		Print false if result is less than 200.
+		System.out.println(!(num < 200)); // We could use num >= 200
+		
+
+		
+		boolean isFridgeEmpty = true; // This boolean variable is usually referred to as a flag.
+
+		System.out.println("Wake up");
+		System.out.println("Exercise");
+
+		// We go to store if we do not have the breakfast items
+
+		if (isFridgeEmpty) { // If condition
+			// The body of the if statement is executed ONLY IF the if condition evaluates
+			// to true.
+			System.out.println("Go to the grocery store");
+			System.out.println("Buy some eggs");
+			System.out.println("Buy milk and cereal");
+		}
+
+		// Statements after the if statement
+
+		System.out.println("Make a cup of Java!");
+		System.out.println("Have your breakfast");
+		System.out.println("Learn Java!");
+		
+		
+		
+
+		int gasLevel = 10;
+		int tankCapacity = 10;
+
+		if (gasLevel < tankCapacity) {
+			System.out.println("Tank is not full!");
+		}
+
+		System.out.println("End!");
+		
+
+int a = 10;
+
+		boolean decision = a > 0;
+
+		if (decision) { // relational operators, boolean variables
+			System.out.println("a is positive!");
+			// We refer to the body of the if statement as conditionally-executed statements
+		}
+
+		System.out.println("Thank you!");
+
+		int num = 3;
+
+		if (num % 2 == 0) {
+			System.out.println("num is even!");
+		}
+
+
+	// Notes:
+
+		// The if statement condition has to evaluate to true or false.
+
+		// The condition will control if the body of the if statement will be executed
+		// or not
+
+		// The body of the if statement is called the conditionally executed statement
+		// --> Because it executes only if the condition is true.
+
+		// The body of the if statement is bounded by the curly braces {} which is the
+		// scope of the if statement.
+
+		// Anything outside the curly braces will be executed no matter what. These are
+		// called the statements just below the if statement
+
+		int a = 10;
+
+		if (a) {
+			System.out.println("a is positive!");
+		}
+
+		// statements just below the if statement
+		System.out.println("Thank you!");
+
+
+
+		int a = -10;
+
+		// If you remove the {} from the if statement, it will treat the one line after
+		// it as the body of the if statement.
+
+		// This can work if the body of the if statement is actaully a single line, if
+		// it is a multiple line, we HAVE TO include the {}
+
+		if (a > 0)
+			System.out.println("a is positive"); // This is the only conditionally executed statement
+
+		System.out.println("Thank you!"); // This is not a conditionally-executed statement
+
+		// In general, it is recommended to use the {} even if the body is a single
+		// line.
+
+
+		// You can also use logical operators as part of the if condition
+		int a = -10;
+		int b = 5;
+
+		if (a > 0 || b > 2)
+			System.out.println("Hello");
+
+		System.out.println("Thank you!");		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+// *********************************************************************************************************************************************************************************
+		
+		
+		
+		
+		
+//IF & ELSE		
+System.out.println("Please enter your password: ");
+		Scanner scan = new Scanner(System.in);
+		int pass = scan.nextInt();
+		int corrPass = 12345;
+		
+		if (pass==corrPass) {
+			System.out.println("Welcome Back");
+		}
+		else {
+			System.out.println("Incorrect Password");
+		}
+
+		System.out.println("Thank you for visiting our webpage");
+// IF & ELSE IF
+int a = -5;
+		if (a>0) {
+			System.out.println("a is positive");
+		} else if(a==0) {
+			System.out.println("a is 0");
+		} else if (a<0) {
+			System.out.println("a is negative");
+		}
+		System.out.println("Thank you");
+		
+		
+	System.out.println("Please state how many masks you would like to purchase: ");
+		Scanner scan = new Scanner(System.in);
+		int quantMask = scan.nextInt();
+		double price = 2.5;
+		double price500 = 2.0;
+		double price100 = 2.25;
+		
+		
+		
+		if (quantMask>1000) {
+			System.out.println("Sorry, required amount is not available in stock");
+		} else if (quantMask>500) {
+			System.out.println("Your total would be: $ " + quantMask*price500);
+		} else if (quantMask>100) {
+			System.out.println("Your total would be: $ " + quantMask*price100);
+		} else {
+			System.out.println("Your total would be: $ " + quantMask*price);
+		}
+
+
+
+
+
+	System.out.println("Please provide your age: ");
+		Scanner scan = new Scanner(System.in);
+		int age = scan.nextInt();
+		System.out.println("Do you have tickets? (Yes/No): ");
+		String ticket = scan.next();
+		
+		
+		
+		
+		if (age<=18 && ticket.equals("yes")) {
+			System.out.println("Please come in");
+		} else {
+			System.out.println("Sorry, cannot come in");
+		}
+		
+		
+		
+Class Tasks
+
+	Scanner scan = new Scanner(System.in);
+		System.out.println("Please enter total price:");
+		double price = scan.nextDouble();
+
+		double gold=0.9;
+		double silver=0.95; 
+		
+		System.out.println("Do you have membership?");
+		String member = scan.next();
+		
+		if (member.equalsIgnoreCase("yes")) { //membership exists
+			System.out.println("Choose your level? (gold/silver"); //ask level
+			String level = scan.next();
+			
+			if (level.equalsIgnoreCase("gold")) { // gold level
+				System.out.println("Your total is: $" + price*gold);
+				
+			} else if (level.equalsIgnoreCase("silver")) { //silver level
+				System.out.println("Your total is: $" + price*silver);
+				
+			} else {
+				System.out.println("You didn't choose correct membership level. Your total is: $" + price);
+			}	
+				
+		} else { //no membership
+			System.out.println("Your total is: $" + price);
+		}
+	
+
+// Code by: Rana Sawalma
+
+//		We have 2 numbers.
+//		Let's write a program that will print first number only if it is zero or a positive number.
+//		Second number should print regardless of the outcome.
+		int a = -20;
+		int b = 30;
+
+		if (a >= 0) {
+			System.out.println(a);
+		}
+
+		System.out.println(b);
+		
+		// Code by: Eray Elmas
+		Scanner input = new Scanner(System.in);
+
+		int correctPassword = 12345;
+		int userEnteredPassword;
+
+		System.out.println("What is your password");
+		userEnteredPassword = input.nextInt();
+
+		if (userEnteredPassword == correctPassword) {
+			System.out.println("Welcome Back");
+		}
+
+		System.out.println("Thank you for visiting our web page!");
+		
+		
+Scanner input = new Scanner(System.in);
+
+		int correctPassword = 12345;
+		int userEnteredPassword;
+
+		System.out.println("What is your password");
+		userEnteredPassword = input.nextInt();
+
+		if (userEnteredPassword == correctPassword) {
+			// The body of the if statement, will execute if the condition is true
+			System.out.println("Welcome Back");
+		} else {
+			// The body of the else statement, will execute if the condition is false
+			System.out.println("Incorrect Password!");
+		}
+
+
+		System.out.println("Thank you for visiting our web page!");
+
+
+int a = -5;
+
+		// The problem
+
+//		if (a > 0) {
+//			System.out.println("a is positive");
+//		} else {
+//			System.out.println("a is not positive. Could be zero or negative!");
+//		}
+
+		// Solution 1: Stacked if statements
+		// If the conditions are mutually exclusive (meaning if one is true, the others
+		// CAN NEVER be true), then the stacked if statements is not the best way
+
+//		if (a > 0) {
+//			System.out.println("a is positive");
+//		}
+//
+//		if (a < 0) {
+//			System.out.println("a is negative");
+//		}
+//
+//		if (a == 0) {
+//			System.out.println("a is zero");
+//		}
+
+		// Solution 2: if - else if
+
+		if (a > 0) {
+			System.out.println("a is positive");
+		} else if (a == 0) {
+			System.out.println("a is zero");
+		} else if (a < 0) {
+			System.out.println("a is negative");
+		}
+
+		System.out.println("Thank you!");
+
+int a = -5;
+
+		// We can remove the last if statement since else will capture everything else,
+		// which is < 0
+		if (a > 0) {
+			System.out.println("a is positive");
+		} else if (a == 0) {
+			System.out.println("a is zero");
+		} else {
+			System.out.println("a is negative");
+		}
+
+		System.out.println("Thank you!");
+
+import java.util.Scanner;
+
+public class ConditionalStatementPractice {
+
+	public static void main(String[] args) {
+
+		int a = 10;
+		int b = 5;
+
+		// We can't say
+//		if (a > 0) {
+//			System.out.println("a is positive");
+//		} else if (b > 0) {
+//			System.out.println("b is positive");
+//		}
+
+		// print the state of each of a or b being positive
+
+		if (a > 0) {
+			System.out.println("a is positive");
+		} else if (a < 0) {
+			System.out.println("a is negative");
+		} else {
+			System.out.println("a is zero");
+		}
+
+		if (b > 0) {
+			System.out.println("b is positive");
+		} else if (b < 0) {
+			System.out.println("b is negative");
+		} else {
+			System.out.println("b is zero");
+		}
+
+		System.out.println("Thank you!");
+
+	}
+
+}
+
+// Code by: Aysel Bakhtiyar
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Please enter the password");
+		int userpass = input.nextInt();
+
+		int pass1 = 12345;
+		int pass2 = 333;
+		int pass3 = 444;
+
+//		if (userpass == pass1) {
+//			System.out.println("Welcome back");
+//		} else if (userpass == pass2) {
+//			System.out.println("Welcome back");
+//		} else if (userpass == pass3) {
+//			System.out.println("Welcome back");
+//		} else {
+//			System.out.println("Incorrect Password");
+//		}
+
+		if (userpass == pass1 || userpass == pass2 || userpass == pass3) {
+			System.out.println("Welcome back");
+		} else {
+			System.out.println("Incorrect Password");
+		}
+
+		System.out.println("Thank you for visiting our web page");
+
+//		You are wholesaling face masks:
+//			- You have 1000 masks in your stock and price of 1 mask is: $2.50
+//			Ask user to enter how many masks do they want to purchase.
+//			- if user enters anything more than 1000. Print sorry we don't have that many in stock. 
+//			- if user buys more than 500, each mask price drops to $2.00
+//			- if user buys more than 100, each mask price drops to $2.25
+//			Calculate users total accordingly and print
+
+		Scanner scan = new Scanner(System.in);
+
+		double price500 = 2.00, price100 = 2.25, price = 2.5;
+
+		System.out.println("How many masks do you want to buy?");
+		int count = scan.nextInt();
+		double total = 0;
+
+		if (count > 1000) {
+			System.out.println("Sorry we don't have that many in stock");
+		} else if (count > 500) {
+			total = count * price500;
+		} else if (count > 100) {
+			total = count * price100;
+		} else if (count > 0) {
+			total = count * price;
+		} else {
+			System.out.println("You owe me " + (-1 * count) + " masks!");
+		}
+
+		System.out.println("Your total is going to be: $" + total);
+
+String a = "apple";
+		String b = "apple";
+
+		System.out.println(a == b); // true
+		// The true is because add == add, not because apple == apple
+
+		String c = new String("apple");
+		System.out.println(a == c); // false
+		System.out.println(b == c); // false
+
+		String d = new String("apple");
+		System.out.println(c == d); // false
+
+		/*
+		 * General rule: == is used to compare the values in the stack memory.
+		 * 
+		 * If we are comparing primitive data types, this means we are comparing their
+		 * values.
+		 * 
+		 * Since the content of the stack memory for reference variables is the address
+		 * not the actual object.
+		 * 
+		 * When you use == to compare objects, what is being compared are the addresses
+		 * in the stack memory.
+		 * 
+		 * That is why even if we have two objects with the String "apple", == will
+		 * still return false, because it compares addresses not the strings.
+		 */
+
+int x = 10;
+		int y = 10;
+
+		System.out.println(x == y);
+
+		// Then how do we compare Strings?
+
+		String a = "apple";
+		String b = "apple";
+
+		String c = new String("10");
+		String d = new String("10");
+
+		// Since String is an object, it has behavior
+
+		// One of the behaviors (methods) of String is to compare using equals()
+
+		System.out.println(c.equals(d));
+		System.out.println(a.equals(c));
+		System.out.println(a.equals(b));
+		System.out.println(d.equals(c));
+
+Scanner scan = new Scanner(System.in);
+
+//		Write a program that prompts for user's age and
+//		Whether they have tickets: answer should be in yes/no format
+
+		System.out.println("Please enter your age: ");
+		int userAge = scan.nextInt();
+
+		System.out.println("Do you have a ticket?");
+		String hasTicket = scan.next();
+
+		// Once, user enters both, check if age is 18 or older and if they have tickets,
+		// print: "Come on in"
+		// If one of those conditions don't meet, then print: "Sorry, cannot come in"
+
+		if (userAge >= 18 && hasTicket.equalsIgnoreCase("yes")) {
+			System.out.println("Come in!");
+		} else {
+			System.out.println("Sorry, you can't get in!");
+		}
+
+Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter your age: ");
+		int userAge = scan.nextInt();
+
+		System.out.println("Do you have a ticket?");
+		String hasTicket = scan.next();
+
+//		if (userAge > 60) {
+//			System.out.println("Come in!");
+//		} else if (userAge >= 18 && hasTicket.equalsIgnoreCase("yes")) {
+//			System.out.println("Come in!");
+//		} else {
+//			System.out.println("Sorry, you can't get in!");
+//		}
+
+//		if (userAge > 60 || (userAge >= 18 && hasTicket.equalsIgnoreCase("yes"))) {
+//			System.out.println("Come in!");
+//		} else {
+//			System.out.println("Sorry, you can't get in!");
+//		}
+
+Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter your age: ");
+		int userAge = scan.nextInt();
+
+		if (userAge > 60) {
+			System.out.println("Come in!");
+		} else if (userAge >= 18) {
+			System.out.println("Do you have a ticket?");
+			String hasTicket = scan.next();
+
+			// nested if statement
+			if (hasTicket.equalsIgnoreCase("yes")) {
+				System.out.println("Come in!");
+			} else {
+				System.out.println("Sorry, you can't get in!");
+			}
+
+		} else {
+			System.out.println("Sorry, you can't get in!");
+		}
+
+// If you are older than 60, no ticket needed
+		// If you are older than 18 (less than 60), ticket is needed
+		// If you are younger than 18, or have no ticket, you can't get in.
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter your age: ");
+		int userAge = scan.nextInt();
+
+		if (userAge >= 60) {
+			System.out.println("Come in!");
+		} else if (userAge >= 18) {
+			// We need to check for the tickets
+			System.out.println("Do you have a ticket?");
+			String hasTicket = scan.next();
+
+			if (hasTicket.equalsIgnoreCase("yes")) {
+				System.out.println("Come in!");
+			} else {
+				System.out.println("You can not come in!");
+			}
+
+		} else { // less than 18
+			System.out.println("You can not come in!");
+		}
+
+		// If you are older than 60, no ticket needed
+		// If you are older than 18 (less than 60), ticket is needed
+		// If you are younger than 18, or have no ticket, you can't get in.
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter your age: ");
+		int userAge = scan.nextInt();
+
+		if (userAge >= 60) {
+			System.out.println("Come in!");
+		} else if (userAge >= 18) {
+			// We need to check for the tickets
+			System.out.println("Do you have a ticket?");
+			String hasTicket = scan.next();
+
+			if (hasTicket.equalsIgnoreCase("yes")) {
+				System.out.println("Come in!");
+			} else {
+				System.out.println("You can not come in!");
+			}
+
+		} else { // less than 18
+			System.out.println("You can not come in!");
+		}
+
+		System.out.println("Would you like to subscribe to our newsletter?");
+		String subscribeResponse = scan.next();
+
+		if (subscribeResponse.equals("yes")) {
+			System.out.println("You are subscribed! Have a good day!");
+		}
+
+		// Nested if statement
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("What is your annual salary?");
+		int salary = scan.nextInt();
+
+		if (salary >= 50000) { // Outer if statement
+
+			System.out.println("How many years have you been at your current job?");
+			int yearsInJob = scan.nextInt();
+
+			if (yearsInJob >= 2) { // Inner if statement, qualified
+
+				System.out.println("Congratulations! You are qualified for our loan!");
+
+			} else {
+				// Disqualified for the number of years in current job
+				System.out.println("You must have been with your current employer for at least two years to qualify.");
+			}
+
+		} else { // salary is less than 50K
+			System.out.println("You must be earning more than $50k to qualify.");
+		}
+
+
+		Scanner scan = new Scanner(System.in);
+
+//		Modify password example to achieve 2 level authentication.
+//		We now have secret passcode that will be sent to users phone. Value is: 003. 
+//		If user enters 12345 password, then ask for secret passcode. 
+//		If user enters secret passcode correct, then print "Welcome back"
+//		Otherwise, print: "Incorrect Password"
+
+//		Test this with entering 12345, 222, 333 and compare results.
+//		Different results are due to scopes
+
+		String correctPassword = "12345";
+		String correctCode = "003";
+
+		System.out.println("Please enter your password: ");
+		String userEnteredPassword = scan.next();
+
+		// Comparing the passwords
+		if (userEnteredPassword.equals(correctPassword)) {
+			// We need to check for the PIN code
+			System.out.println("We have sent a code to your phone.");
+			System.out.println("Please enter the temp code: ");
+			String userEnteredCode = scan.next();
+
+			// Comparing the PIN codes
+			if (userEnteredCode.equals(correctCode)) {
+				// Log in
+				System.out.println("Welcome back!");
+			} else {
+				// Incorrect code
+				System.out.println("The PIN you entered is wrong!");
+			}
+		} else {
+			// Incorrect Password
+			System.out.println("Incorrect password!");
+		}
+
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter the total price: $");
+		double price = scan.nextDouble();
+
+		System.out.println("Do you have a membership?");
+		String hasMembership = scan.next();
+
+		if (hasMembership.equalsIgnoreCase("yes")) {
+			System.out.println("What kind of membership do you have?");
+			String membershipType = scan.next();
+
+			if (membershipType.equalsIgnoreCase("gold")) { // If gold
+				System.out.println("Your total price is: $" + (0.9 * price));
+			} else if (membershipType.equalsIgnoreCase("silver")) { // If silver
+				System.out.println("Your total price is: $" + (0.95 * price));
+			} else {
+				System.out.println("This is not a valid membership type!");
+				System.out.println("Your total price is: $" + price);
+			}
+		} else { // I do not have a membership, pay 100%
+			System.out.println("Your total price is: $" + price);
+		}
+
+		// Simplified version with a single print statement at the end.
+		// The if statement will take care of updating the final value of the price.
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter the total price: $");
+		double price = scan.nextDouble();
+
+		System.out.println("Do you have a membership?");
+		String hasMembership = scan.next();
+
+		if (hasMembership.equalsIgnoreCase("yes")) {
+
+			System.out.println("What kind of membership do you have?");
+			String membershipType = scan.next();
+
+			if (membershipType.equalsIgnoreCase("gold")) { // If gold
+				price = price * 0.9;
+			} else if (membershipType.equalsIgnoreCase("silver")) { // If silver
+				price = price * 0.95;
+			} else {
+				System.out.println("This is not a valid membership type!");
+			}
+		}
+
+		System.out.println("Your total price is: $" + price);
+
+
+		// Simplified version with a single print statement at the end.
+		// The if statement will take care of updating the final value of the price.
+		// Cleaner with variables instead of literals and rounded output
+
+		Scanner scan = new Scanner(System.in);
+
+		double goldDiscount = 0.1;
+		double silverDiscount = 0.05;
+
+		System.out.println("Enter the total price: $");
+		double price = scan.nextDouble();
+
+		System.out.println("Do you have a membership?");
+		String hasMembership = scan.next();
+
+		if (hasMembership.equalsIgnoreCase("yes")) {
+
+			System.out.println("What kind of membership do you have?");
+			String membershipType = scan.next();
+
+			if (membershipType.equalsIgnoreCase("gold")) { // If gold
+				price = price - price * goldDiscount;
+			} else if (membershipType.equalsIgnoreCase("silver")) { // If silver
+				price = price - price * silverDiscount;
+			} else {
+				System.out.println("This is not a valid membership type!");
+			}
+		}
+
+		System.out.println("Your total price is: $" + Math.round(price*100.0)/100.0);
+
+
+		Scanner scan = new Scanner(System.in);
+
+		int number1 = 1, number2 = 2, number3 = 3;
+
+		System.out.println("Please enter your movie selection (1-3): ");
+		int userSelection = scan.nextInt();
+
+//		if (userSelection == number1) {
+//			System.out.println("You selected: James Bond - No Time to Die");
+//		} else if (userSelection == number2) {
+//			System.out.println("You selected: Dune");
+//		} else if (userSelection == number3) {
+//			System.out.println("You selected: Avengers!");
+//		} else {
+//			System.out.println("Incorrect selection!");
+//		}
+
+		// switch-case
+		switch (userSelection) {
+		case 1:
+			System.out.println("You selected: James Bond - No Time to Die");
+			break;
+		case 2:
+			System.out.println("You selected: Dune");
+			break;
+		case 3:
+			System.out.println("You selected: Avengers!");
+			break;
+		default:
+			System.out.println("Incorrect selection!");
+			break;
+		}
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter your movie selection (1-3): ");
+		int userSelection = scan.nextInt();
+
+		// Notes:
+		// 1- We have well-defined and countable options to choose from.
+		// 2- The options have to be unique --> No duplicate cases
+		// 3- The key in the switch statement will be used to compare to cases
+		// 4- If a match is found, the body of the case will be executed.
+		// 5- If not match is found, default case will be executed.
+		// 6- The default case is similar to the else in the if-statements, it catches
+		// everything else.
+		// 7- The default case is optional.
+		// 8- The cases do not have to be ordered - However, ordering them is a good
+		// habit
+		// 9- The break statement is used to get out of the switch statement after
+		// executing the code of the matching case.
+		// 10- The break in the default case is redundant
+
+		// 11- The break in all statements is actually optional
+		
+		
+		// switch-case
+		switch (userSelection) {
+		case 3:
+			System.out.println("You selected: Avengers!");
+			break;
+		case 1:
+			System.out.println("You selected: James Bond - No Time to Die");
+			break;
+//		case 1: // Error because it is a duplicate
+//			System.out.println();
+		case 2:
+			System.out.println("You selected: Dune");
+			break;
+
+		default:
+			System.out.println("Incorrect selection!");
+//			break; // This is redundant
+		}
+
+		String day = "Tuesday";
+
+		switch (day) {
+		case "Monday":
+			System.out.println("Starting the week!");
+			break;
+//		default:
+//			System.out.println("You get the idea!");
+//			break;
+		}
+
+		System.out.println("End!");
+		
+		// 11- The break in all statements is actually optional --> This will cause the
+		// fall-through behavior
+
+		switch (userSelection) {
+		case 1:
+			System.out.println("You selected: James Bond - No Time to Die");
+//			break;
+		case 2:
+			System.out.println("You selected: Dune");
+//			break;
+		case 3:
+			System.out.println("You selected: Avengers!");
+//			break;
+		default:
+			System.out.println("Incorrect selection!");
+		}
+		
+		// You can utilize the fall-through behavior to work for you by combining
+		// multiple cases together with a single action
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Would you like to continue: ");
+		String userSelection = scan.next();
+		
+		switch (userSelection) {		
+		case "y":
+		case "Y":
+		case "yes":
+		case "YES":
+		case "Yes":
+			System.out.println("Continue");
+			break;
+		case "No":
+			System.out.println("Stop");
+			break;
+		default:
+			System.out.println("Incorrect selection!");
+		}
+		
+		System.out.println("Good night!");
+
+Scanner scan = new Scanner(System.in);
+
+		System.out.println("Would you like to continue: ");
+		String userSelection = scan.next();
+		
+		
+		// We can do the same work using the if statement as follows:
+		if (userSelection.equalsIgnoreCase("y") || userSelection.equalsIgnoreCase("yes") ) {
+			System.out.println("Continue");
+		}
+		
+		switch (userSelection) {		
+		case "y":
+		case "Y":
+		case "yes":
+		case "YES":
+		case "Yes":
+			System.out.println("Continue");
+			break;
+		case "No":
+			System.out.println("Stop");
+			break;
+		default:
+			System.out.println("Incorrect selection!");
+		}
+		
+		System.out.println("Good night!");
+
+
+// Limitations of the switch Statement
+		
+		// 1- switch-case can't check for ranges --> if statements can.
+		
+		
+		int userSelection = 5;
+		
+		switch(userSelection) {
+		
+		// case x >0: // You can't do that.
+	
+		}
+		
+		
+		// 2- The switch statement only works with byte, short, int, char, and String.
+		
+//		double b = 12.5;
+//		
+//		switch (b) {
+//		
+//		case 'y':
+//		}
+		
+		
+		// 3- switch statement has to operate on a single key --> It means that I can't combine conditions of more than one variable.
+		int x = 5, y = 10;
+		if(x >= 5 && y == 10) {
+			
+		}
+		
+		switch(x) {
+		
+		}
+		
+Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Please enter the month number: ");
+		int monthNum = scan.nextInt();
+		
+		switch (monthNum) {
+			case 1: System.out.println("January"); break;
+			case 2: System.out.println("February"); break;
+			case 3: System.out.println("March"); break;
+			case 4: System.out.println("April"); break;
+			case 5: System.out.println("May"); break;
+			case 6: System.out.println("June"); break;
+			case 7: System.out.println("July"); break;
+			case 8: System.out.println("August"); break;
+			case 9: System.out.println("September"); break;
+			case 10: System.out.println("October"); break;
+			case 11: System.out.println("November"); break;
+			case 12: System.out.println("December"); break;
+			default: System.out.println("Invalid Month number");
+		}
+		
+		System.out.println("Thank you for using the month converter!");
+
+Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Please enter the month number: ");
+		int monthNum = scan.nextInt();
+		String output;
+		
+		switch (monthNum) {
+			case 1: output = "January"; break;
+			case 2: output = "February"; break;
+			case 3: output = "March"; break;
+			case 4: output = "April"; break;
+			case 5: output = "May"; break;
+			case 6: output = "June"; break;
+			case 7: output = "July"; break;
+			case 8: output = "August"; break;
+			case 9: output = "September"; break;
+			case 10: output = "October"; break;
+			case 11: output = "November"; break;
+			case 12: output = "December"; break;
+			default: output = "Invalid Month number";
+		}
+		
+		System.out.println(output);
+		
+		System.out.println("Thank you for using the month converter!");
+		
+Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter the total price: ");
+		double price = scan.nextDouble();
+
+		System.out.println("Do you have a membership?");
+		String hasMembership = scan.next();
+
+		String membershipType = "";
+		
+		// Outer if statement
+		if (hasMembership.equalsIgnoreCase("yes")) {
+			// Has a membership --> Need to ask about the type
+			System.out.println("What kind of membership do you have?");
+			membershipType = scan.next();
+
+			switch (membershipType) {
+			case "gold":
+			case "Gold":
+				price *= 0.9; // price = price * 0.9;
+				break;
+
+			case "silver":
+			case "Silver":
+				price *= 0.95;
+				break;
+			default:
+				System.out.println("That is an invalid membership type!");
+			}
+		}
+		
+		// Print a thank you message to loyal customers
+		if (membershipType.equalsIgnoreCase("gold") || membershipType.equalsIgnoreCase("silver")) {
+			System.out.println("Thank you for being a loyal " + membershipType + " member!");
+		}
+
+		System.out.println("Your total is: $" + price);
+		
+//		Write a program with two int variables, int x and int y, and give each one a value.
+//		Depending on their values, print "x is bigger than y", "x is smaller than y", or "x and y are the same". 
+//		Change the values and run the program a few times to check it works.
+
+		int difference = 0;
+		
+		int x = 10, y = 10;
+		
+		if (x > y) {
+			System.out.println("x is greater than y");
+			difference = x - y;
+		} else if (y>x) {
+			System.out.println("y is greater than x");
+			difference = y - x;
+		} else {
+			System.out.println("x and y are equal");
+		}
+		
+		System.out.println("The difference is: " + difference);
+		
+		
+		
+		
+		
+int randomNumber = ThreadLocalRandom.current().nextInt(1, 6);
+Scanner scan = new Scanner(System.in);
+
+		int randomNumber = ThreadLocalRandom.current().nextInt(1, 6);
+
+		System.out.println("Welcome, guess the number between 1 and 5:");
+		int userEnteredNumber = scan.nextInt();
+		
+		if (randomNumber == userEnteredNumber) {
+			System.out.println("Correct! Aren't you lucky!");
+		} else {
+			System.out.println("Hard luck! You can try next time! By the way, the random number was: " + randomNumber);
+		}
+
+// what is 5? --> int literal
+		// what is x? --> variable
+		// What is int? --> Data type
+		
+		// Where does x live? --> Stack
+		// Where is the value 5 stored? --> Stack
+		// What does x store in it? --> The value 5
+		
+		// What is "Yoll"? --> String literal
+		// What is str? --> reference variable
+		// What does the str store in it? --> Hash address
+		// Where does "Yoll" live? --> In the heap, in the String pool
+		
+		// Where does str2 live? --> Stack
+		// Where does the String object "Academy" live? --> Heap, but not in the String pool
+		
+		
+		int x = 5;
+		String str = "Yoll";
+		
+		String str2 = new String("Academy");
+		
+		
+		// How to compare Strings?
+		
+		System.out.println(str == "Yoll");
+		System.out.println("Academy" == str2);
+		
+		// TO compare the content of Strings, we have to use equals method.		
+		System.out.println(str.equals("Yoll"));
+		System.out.println("Academy".equals(str2));
+		
+// length()
+		String fruit = "apple\t";
+		System.out.println(fruit.length());
+
+		int fruitLength = fruit.length();
+
+		System.out.println("The length of the string " + fruit + " is: " + fruitLength);
+		
+		System.out.println("Apple Juice".length());
+		
+		
+		// Find the number of digits in a number
+		long val = 2345363534L;
+		String valString = String.valueOf(val);
+		System.out.println(valString.length());
+		
+Scanner scan = new Scanner(System.in);
+		
+		// Method names they follow the same naming convention of variables
+		// Then how do we distinguish between them? --> The ()
+		// when we say methods, we always use () after the name of the method
+
+		// Some methods will have the () empty if they do not need input to perform
+		// their job, others may need one, two or more inputs.
+
+		// Many methods return outputs of specific data type, which we can take and use
+		// in our program.
+
+		// Usually, the name of the method gives a very good indication of what it does.
+
+
+		// charAt(int idx) --> takes in int index, returns a char
+		// Indexing of a String starts from 0
+		
+		 // Indices: 01234
+		String car = "Tesla";
+		
+		System.out.println(car.charAt(0)); // T not e
+		
+		System.out.println(car.length()); // 5 - There are five characters
+//		System.out.println(car.charAt(5)); // StringIndexOutOfBoundsException
+		
+		
+		System.out.println("Enter a word: ");
+		String str = scan.next();
+		
+		// Write a code to print the first and last caharacter of the user input
+		System.out.println("The first character is: " + str.charAt(0));
+		int strLength = str.length();
+		System.out.println("The last character is: " + str.charAt(strLength - 1)); // what index?
+		
+String car = "Tesla";
+		
+		System.out.println(car.equals("TeSla"));
+		
+		System.out.println(car.equalsIgnoreCase("teSla"));
+		
+
+int x = 5;
+		
+		String s = "Apple";
+		
+		if (x >= 0 && x < s.length()) {
+			System.out.println(s.charAt(x));			
+		}
+		
+String word1, word2;
+
+		System.out.println("Please enter two words, and I will print the longer word: ");
+
+		word1 = scan.next();
+		word2 = scan.next();
+
+		// Method 1
+
+//		if (word1.length() > word2.length()) {
+//			System.out.println(word1);
+//		} else if (word1.length() < word2.length()) {
+//			System.out.println(word2);
+//		} else {
+//			System.out.println("The two words are of the same length.");
+//		}
+
+		// Method 2: Useful if you need to use the w1Length and w2Length again for a
+		// different purpose in the future.
+
+		int w1Length = word1.length();
+		int w2Length = word2.length();
+
+		if (w1Length > w2Length) {
+			System.out.println(word1);
+		} else if (w1Length < w2Length) {
+			System.out.println(word2);
+		} else {
+			System.out.println("The two words are of the same length.");
+		}
+		
+// startsWith --> Takes a String and returns boolean
+		String sentence = "Students are loving the codeboard assignments - said no one ever";
+		
+		System.out.println(sentence.startsWith("Students")); // true
+		System.out.println(sentence.startsWith("students")); // false
+		System.out.println(sentence.startsWith("Stu")); // true
+		System.out.println(sentence.startsWith("S")); // true
+		
+		System.out.println(sentence.startsWith(sentence)); // true
+		
+// Ignore Case --> We need to use toLowerCase method
+		
+		String sentenceAllLower = sentence.toLowerCase();
+		
+		System.out.println(sentenceAllLower);
+		System.out.println(sentenceAllLower.startsWith("student"));
+		
+		// startsWith taking an offset --> Takes a String and an offset and returns boolean
+		//                 12345678|
+		String sentence = "Students are loving the codeboard assignments - said no one ever";
+		
+		// VERY IMPORTANT NOTE:
+		// The offset represents the number of characters that we need to ignore before we compare
+		System.out.println(sentence.startsWith("tudents", 1)); // true
+		
+		System.out.println(sentence.startsWith(" ", 8)); // true
+		System.out.println(sentence.startsWith(" are", 8)); // true
+		
+// endsWith
+		
+		String sentence = "Students are loving the codeboard assignments - said no one ever";
+		
+		System.out.println(sentence.endsWith("ever"));
+		System.out.println(sentence.endsWith(" ever"));
+		System.out.println(sentence.endsWith(""));
+		
+// length() --> int
+		// charAt() --> char
+		// equals, equalsIgnoreCase, startsWith, endsWith --> boolean
+		// substring --> returns a completely new String that is a substring of the original String
+		
+		//         012345678901234567890123456789
+		String sentence = "Students are loving the codeboard assignments - said no one ever";
+		
+		// substring() --> returns a smaller string with the specified range
+		// To define the range, we need to give the starting index (inclusive)
+		// then we have to give the end index, which is non-inclusive
+		
+//		System.out.println(sentence.substring(0,9));
+//		
+//		System.out.println(sentence.substring(13,19));
+		
+		// If we provide start index, the substring ends at the end of the original String
+		System.out.println(sentence.substring(13));
+		
+		// THERE IS NOT A SINGLE STRING METHOD THAT WILL EVER BE ABLE TO MODIFY THE ORIGINAL STRING
+
+		System.out.println(sentence); // The sentence will not change, it will remain the origianl one
+		
+		String partialString = sentence.substring(13);
+		
+		System.out.println(partialString);
+		
+// String is immutable -> You can't change a String content once created
+		
+		String sentence = "The sky is blue";
+		System.out.println(sentence.hashCode());
+//		String updatedSentence = sentence.substring(2, 8);
+//		System.out.println(updatedSentence);
+//		System.out.println(sentence);
+		
+		sentence = sentence.substring(2,8);
+		System.out.println(sentence.hashCode());
+
+		System.out.println(sentence); // e sky
+		
+		// Given a string word, print true if "desk" appears starting at index 0 or 1 in
+		// the string, such as with "desk******" or "*desk**" but not "**desk**". The
+		// string may be any length.
+
+		Scanner scan = new Scanner(System.in);
+		String sentence = scan.next();
+
+		String keyWord = "desk";
+		boolean isMatch;
+
+		if (sentence.startsWith(keyWord) || sentence.startsWith(keyWord, 1)) {
+			isMatch = true;
+		} else {
+			isMatch = false;
+		}
+
+		System.out.println(isMatch);
+		
+		// Given a string word, print true if "desk" appears starting at index 0 or 1 in
+		// the string, such as with "desk******" or "*desk**" but not "**desk**". The
+		// string may be any length.
+
+		Scanner scan = new Scanner(System.in);
+		String sentence = scan.next();
+
+		String keyWord = "desk";
+
+
+		System.out.println(sentence.startsWith(keyWord) || sentence.startsWith(keyWord, 1));
+
+		// To ignore case, we can compare against the lowercase version of the String sentence.
+//		System.out.println(sentence.toLowerCase().startsWith(keyWord) || sentence.toLowerCase().startsWith(keyWord, 1));
+
+//Check if keyword exists // All lower case 
+    Scanner scan = new Scanner(System.in);
+	    String input = scan.next();
+	    String key= "desk";
+	    
+	   
+	    
+	    System.out.println(input.toLowerCase().startsWith(key) || input.toLowerCase().startsWith(key,1));
+		
+// Delete last characters		
+Scanner scan = new Scanner(System.in);
+	    String input = scan.next();
+	    int num = input.length();
+	   
+	    String output=input.substring(0, num-4);
+	    System.out.println(output);
+//More dynamic
+ Scanner scan = new Scanner(System.in);
+	    String input = scan.next();
+	    int num = input.length();
+	    int cut = 3;
+	    String output=input.substring(0, num-cut);
+	    System.out.println(output);
+//**for more than one word, use scan.nextLine();
+
+Scanner scan = new Scanner(System.in);
+		String word = scan.next();
+
+		int num = word.length();
+
+		// 012345678
+		// developer
+
+		// 012345
+		// tester
+
+		String shortenedWord = word.substring(0, num - 2);
+		System.out.println(shortenedWord);
+
+
+		// 0123456
+		String fruit = "apple";
+
+//		System.out.println(fruit.charAt(fruit.length()));
+
+		System.out.println(fruit.substring(2, fruit.length()));
+		// indexOf	--> Returns "THE FIRST INSTANCE" of the string	
+						//     0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |  9
+						// 0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+		String sentence = "I did all my codeboard assignments and the codeboard exploded! What is a codeboard anyways?";
+
+		int num = sentence.indexOf("did");
+		System.out.println(num); // 2
+
+		System.out.println(sentence.indexOf("a")); // 6
+		
+		System.out.println(sentence.indexOf("codeboard")); // 13
+		
+		System.out.println(sentence.indexOf("Java")); // -1 because the String does not have Java in it
+
+		System.out.println(sentence.indexOf("i")); // 3
+		
+		System.out.println(sentence.indexOf("I")); // 0
+		
+		System.out.println(sentence.indexOf("?"));
+
+						//     0    |    1    |    2    |    3    |    4    |    5    |    6    |    7    |    8    |  9
+						// 0123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890
+		String sentence = "I did all my codeboard assignments and the codeboard exploded! What is a codeboard anyways?";
+
+		System.out.println(sentence.indexOf("codeboard", 5)); // 13
+
+		System.out.println(sentence.indexOf("codeboard", 13)); // 13
+
+		System.out.println(sentence.indexOf("codeboard", 14)); // 43
+
+		int num = sentence.indexOf("codeboard");
+		int num2 = sentence.indexOf("codeboard", num + 1);
+		int num3 = sentence.indexOf("codeboard", num2 + 1);
+		int num4 = sentence.indexOf("codeboard", num3 + 1);
+
+		System.out.println(num + " " + num2 + " " + num3);
+		System.out.println(num4);
+
+		// lastIndexOf
+		System.out.println(sentence.lastIndexOf("codeboard")); // 73
+
+		System.out.println(sentence.lastIndexOf("ed")); // 59
+
+		// lastIndexOf + fromIndex (indexOf will go backward) 
+		System.out.println(sentence.lastIndexOf("d", 0)); // Anything before 0 is negative one
+		System.out.println(sentence.lastIndexOf("d", 4)); //4
+		System.out.println(sentence.lastIndexOf("d", 3)); //2
+		
+		String fruit = "apple";
+		String form = " juice";
+
+		System.out.println(fruit + form);
+
+		System.out.println(fruit.concat(form));
+
+		int num = 10;
+		
+		System.out.println(fruit + 5);
+//		System.out.println(fruit.concat(num)); // Will give an error because concat is limited to String inputs only
+		System.out.println(fruit.concat(String.valueOf(num)));
+
+
+//		Write a program that asks user to enter a US phone number with country code
+//		First two digit must be +1
+//		If matches print, "Thank you"
+//		If doesn't match then print "This is an invalid country code"
+
+		System.out.println("Please enter the phone number: ");
+		String phoneNum = scan.next();
+
+		// Method 1: Using startsWith
+//		if (phoneNum.startsWith("+1")) {
+//			System.out.println("Thank you!");
+//		} else {
+//			System.out.println("Invalid number!");
+//		}
+
+		// Method 2: indexOf
+//		if (phoneNum.indexOf("+1") == 0) {
+//			System.out.println("Thank you!");
+//		} else {
+//			System.out.println("Invalid number!");
+//		}
+
+//		// Method 3: charAt
+//		if (phoneNum.charAt(0) == '+' && phoneNum.charAt(1) == '1') {
+//			System.out.println("Thank you!");
+//		} else {
+//			System.out.println("Invalid number!");
+//		}
+		
+		// Method 4: substring and equals
+//		if (phoneNum.substring(0,2).equals("+1")) {
+//			System.out.println("Thank you!");
+//		} else {
+//			System.out.println("Invalid number!");
+//		}	
+
+		str = str.replace("watching", "action");
+		System.out.println(str);
+
+//		str = str.replace("we", "I");
+//		System.out.println(str); // It is case sensitive, it replaced the last two "we", but not the first one
+//									// because it is "We"
+
+//		String quoteI = str.toLowerCase().replace("we", "I");
+//		System.out.println(quoteI);
+//		
+//		
+//		str = str.replace("Java", "Python");
+//		System.out.println(str);
+
+		// Replace the first we
+		int num = str.indexOf("We");
+		System.out.println(str.substring(0,num) + "I" + str.substring(num + 2));
+		
+		
+		// replace
+
+		String str = "\"We generate fear while we sit, we overcome them by watching.\" - Dr. Henry Link";
+
+		str = str.replace("e", "$");
+		System.out.println(str);
+
+		str = str.replace('e', '#');
+		System.out.println(str);
+		
+		String str = "I want 13 slices of honey cake and 2 cups of tea.";
+//		str = str.replaceFirst("[0-9][0-9]", "___");
+		
+		str = str.replaceFirst("of", "___");
+		System.out.println(str);
+		
+		str = str.replaceFirst("of", "___");
+		System.out.println(str);
+		
+		
+		// contains()
+
+		String str = "Electric cars are cool";
+		boolean result = str.contains("Electric");
+		System.out.println(result); // true
+
+		result = str.contains("electric");
+		System.out.println(result); // false - case sensitive
+
+		result = str.contains("and");
+		System.out.println(result); // false
+
+		result = str.contains("c");
+		System.out.println(result); // true
+
+		result = str.contains(" ");
+		System.out.println(result); // true
+
+		result = str.contains(""); // true
+		System.out.println(result);
+		
+		// toLowerCase() and toUpperCase()
+
+		String str = "Cranberry";
+		str = str.toUpperCase();
+		System.out.println(str);
+
+		str = str.toLowerCase();
+		System.out.println(str);
+
+		String str2 = "Electric cars are the best";
+		String str2LowerCase = str2.toLowerCase();
+		System.out.println(str2LowerCase.contains("electric"));
+
+		System.out.println(str2.toLowerCase().contains("electric")); // Method chaining
+		// This is a valid chaining because str2.toLowerCase() returns a new string with
+		// all lower-case characters, which can then apply the method contains.
+
+		// System.out.println(str2.contains("electric").toLowerCase()); // This is an invalid chaining because the first
+																		// part with contains returns a boolean which
+																		// can't have toLowerCase applied to it.																	
+
+		// isEmpty
+		String str = ""; // Empty String
+		System.out.println(str.isEmpty()); // true
+
+		str = "apple";
+		System.out.println(str.isEmpty()); // false
+
+		str = " ";
+		System.out.println(str.isEmpty()); // false
+
+		// isBlank
+		System.out.println(str.isBlank()); // true
+		
+		str = "";
+		System.out.println(str.isBlank()); // true																		
+		
+		
+//20/11/2022
+// trim() --> Removes spaces before and after a String
+		String str = "         Welcome to Java!      ";
+		System.out.println(str);
+		System.out.println(str.trim());
+		
+
+		str = "         Welcome           to Java!      ";
+		System.out.println(str.trim());
+		
+		
+		String strFromSite = "Black Friday ";
+		String expected = "Black Friday";
+		System.out.println(strFromSite.trim().equals(expected));
+
+//		 Calculate the length of a given string without the spaces.
+//		 String str = "Success is bound to happen when you believe.";
+
+		String str = "Success        is bound to happen when you believe.";
+
+		System.out.println(str.length()); // 44
+		System.out.println(str.trim().length()); // 44
+
+		String strNoSpaces = str.replace(" ", "");
+
+		System.out.println(strNoSpaces);
+		System.out.println(strNoSpaces.length());
+
+		String strNoSpacesReplaceAll = str.replaceAll(" ", "");
+		System.out.println(strNoSpacesReplaceAll);
+
+		
+		String strNoSpacesRegEx = str.replaceAll("\\s", "");
+		System.out.println(strNoSpacesRegEx);
+
+//		Write a program that will ask user for a word and a sentence. 
+//		Use a string method that will verify if word is contained in the sentence. 
+//		Print out the result as boolean value. 
+//
+//		Bonus: If the word is in the sentence, replace it with 3 underscores ( ___ )
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter a word followed by a sentence: ");
+		String word = scan.next();
+		scan.nextLine();
+		String sentence = scan.nextLine();
+
+//		boolean result = sentence.contains(word);
+//		System.out.println(result);
+
+		System.out.println(sentence.contains(word));
+
+		if (sentence.contains(word)) {
+			sentence = sentence.replace(word, "___");
+		}
+		
+		System.out.println(sentence);
+
+		String str = "They went to the store and they were happy! hey!";
+		
+		str = str.toLowerCase().replace("they", "___");
+		str = str.replace("hey", "___");
+		
+		System.out.println(str);
+		
+		
+//		System.out.println(str.matches("\\b.*\\bThey\\b.*"));
+
+				// Arrays:
+		// 1- How to declare/create an array
+		// 2- How to add values to the array
+		// 3- How to access values and manipulate them in the array.
+		// 4- How does the array look like in the memory.
+
+		// There are two ways to declare an array:
+
+		// Method 1: Initialization and then populate the values
+
+		String[] daysOfWeek; // Declared the array of String
+		daysOfWeek = new String[7]; // Assigned an array of Strings of size 7
+
+//		String[] daysOfWeek = new String[7]; // Initialize an array of Strings
+
+		// We have to use an index to distinguish between the items within the same
+		// array
+		// Similar to Strings, the indexing of an array starts from 0
+		daysOfWeek[0] = "Monday";
+		daysOfWeek[1] = "Tuesday";
+		daysOfWeek[2] = "Wednesday";
+		daysOfWeek[3] = "Thursday";
+		daysOfWeek[4] = "Friday";
+		daysOfWeek[5] = "Saturday";
+		daysOfWeek[6] = "Sunday";
+
+		// How to print the whole array.
+		System.out.println(daysOfWeek); // When you put an array in a simple print statement, it will just print the
+										// type and the hashcode for the memory
+		System.out.println(Arrays.toString(daysOfWeek)); // Using Arrays class and the method toString, we can convert
+															// the array to a String and print it in a nice way
+		
+		// Access of "elements" in an array has to be done using the index
+		System.out.println(daysOfWeek[2]); // Wednesday
+		
+//		System.out.println(daysOfWeek[7]); // ArrayIndexOutOfBoundsException 
+		
+		
+		// Change any element in the array
+		daysOfWeek[0] = "MONDAY";
+		System.out.println(Arrays.toString(daysOfWeek));
+		
+				// Method 2: Initialize the array with values at creation
+
+		// Elements: 12
+		// Indices: 0-11
+		String[] months = { "January", "February", "March", "April", "May", "June", "July", "August", "September",
+				"October", "November", "December" };
+		
+		System.out.println(Arrays.toString(months));
+
+		System.out.println(months[4]);
+		System.out.println(months[12]);	
+		
+
+
+		int[] numbers = new int[5]; // This is useful if you know you will use an array, but you do not know the
+									// values at this time.
+		numbers[0] = 10;
+		numbers[1] = 20;
+		numbers[2] = 30;
+		numbers[3] = 40;
+		numbers[4] = 50;
+
+		// The following are two ways to create an array and initialize the values at
+		// creation
+		int[] values = { 10, 20, 30, 40, 50 };
+		int[] nums = new int[] { 10, 20, 30, 40, 50 }; // This is useful if you already know the values before hand
+
+		System.out.println(Arrays.toString(numbers));
+		System.out.println(Arrays.toString(nums));
+
+		System.out.println(values[0] + ", " + values[1] + ", " + values[2] + ", " + values[3] + ", " + values[4]);
+
+		System.out.println(values[0]);
+		System.out.println(values[1]);
+		System.out.println(values[2]);
+		System.out.println(values[3]);
+		System.out.println(values[4]);
+		
+		
+		
+		// Notes:
+
+		// You can declare the array with the [] next to the data type OR the
+		// (reference) variable
+
+		int[] numbers = new int[4];
+		int nums[] = new int[5];
+
+		String[] names = new String[10];
+		String fruits[] = new String[5];
+
+		// Why?
+
+		int[] x = new int[4], y = { 1, 2, 3, 4, 5 }, z = new int[10]; // x, y, and z are all arrays of integers.
+		int w[] = new int[3], v = 10, q = 2; // w is an array of integers, while v and q are integer variables.
+		
+//Sum of Array
+int sum = Arrays.stream(nameOfArray).sum();
+
+		// Once the array size is defined, you can't change the SIZE of the array. You
+		// can change the values of elements.
+
+		int[] nums = { 1, 2, 3, 4, 5 };
+
+		System.out.println(nums.hashCode());
+		System.out.println(Arrays.toString(nums));
+		
+		System.out.println(nums.length); // 5
+
+		// You can't expand an existing array, but you can re-assign it.
+		nums = new int[10]; // That is a completely new object --> Notice that it will not copy the old values.
+		System.out.println(nums.hashCode());
+		System.out.println(Arrays.toString(nums));
+		
+		System.out.println(nums.length); // 10
+		
+		
+		int numbers[] = new int[5];
+		System.out.println(Arrays.toString(numbers));
+		System.out.println(numbers.length); // 5
+		
+		int[] numbers;
+		numbers = new int[5];
+
+		String[] weekDays = { "Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun" };
+
+		System.out.println(weekDays[weekDays.length - 1]);
+		System.out.println(weekDays[7]); // This will give an error
+
+		weekDays[7] = "Mars"; // This will also give an error because we can't change the length of an array
+								// or expand/shrink it programmatically
+
+
+		// There are three types of errors:
+
+		// 1- Syntax (compile-time) error --> code will not compile
+//		int num = 5;
+//		System.out.println(num)
+
+		// 2- Run-time error --> code will compile, but will crash while running
+//		String[] weekDays = { "Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun" };
+//		System.out.println(weekDays[7]); // This will give an error
+
+		// 3- Logical error (worst) -> Code compiles, code runs, and give an output
+		// (wrong output)
+		System.out.println("The price per person: " + (150 / 8)); // int division gave the wrong output
+		System.out.println("The total distance is: " + (10 - 5 - 2)); // Instead of adding, you subtracted
+		
+
+		// Whenever you create a new array, the values of the array are set to the
+		// default values of that data type.
+		int[] numbers = new int[5];
+		System.out.println(Arrays.toString(numbers)); // [0, 0, 0, 0, 0]
+
+		String[] names = new String[3];
+		System.out.println(Arrays.toString(names)); // [null, null, null]
+
+		double[] nums = new double[10];
+		System.out.println(Arrays.toString(nums)); // [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+		boolean[] answers = new boolean[4];
+		System.out.println(Arrays.toString(answers)); // [false, false, false, false]
+
+		// How is the array represented in the memory?
+
+		// Array of primitive data types, is array of the actual primitive values.
+		int[] nums = { 10, 20, 30, 40, 50 };
+
+		System.out.println(nums.hashCode());
+		System.out.println(nums[0].has); // We can't get hashcode for an element in a primitive data type because it is
+											// a primitive that has no behavior.
+
+		// Array of objects is actually an array of references to the objects.
+
+		String[] names = { "Emily", "John", "Hasan" };
+		System.out.println(names[0]);
+		System.out.println(names.hashCode());
+		System.out.println(names[0].hashCode()); // We can get the hashCode of the object element because it is itself a
+													// reference.
+
+
+		// You can't delete an element from an array because we can't insert/delete or
+		// change the size of the array.
+
+		// What we can do instead is to RESET the value of an element in an array.
+		int[] nums = { 10, 20, 30, 40, 50 };
+		nums[0] = 0;
+		System.out.println(Arrays.toString(nums));
+
+		
+		String[] names = { "Emily", "John", "Hasan" };
+		names[0] = null;
+		System.out.println(Arrays.toString(names));
+
+		  //            0  1   2   3   4
+		int[] nums = { 10, 20, 30, 40, 50 };
+		int c = nums[0];
+
+		nums[0] = nums[nums.length - 1];
+		nums[nums.length - 1] = c;
+
+		System.out.println(Arrays.toString(nums));
+
+//		Create an empty array
+		int[] numbers = new int[5];
+
+//		Print values
+		System.out.println(Arrays.toString(numbers));
+
+//		Assign numbers: 55,443,12,5,387 values and print
+		numbers[0] = 55;
+		numbers[1] = 443;
+		numbers[2] = 12;
+		numbers[3] = 5;
+		numbers[4] = 387;
+
+//		Change value of a 3rd element and print
+		numbers[2] = -100;
+		System.out.println(Arrays.toString(numbers));
+
+//		Print size of the array
+		System.out.println(numbers.length);
+
+
+//		Create a new array and initialize during creation
+		int[] numbers = { 55, 443, 12, 5, 387 };
+
+//		Print values
+		System.out.println(Arrays.toString(numbers));
+
+//		Change value of a 3rd element and print
+		numbers[2] = -100;
+		System.out.println(Arrays.toString(numbers));
+
+//		Print size of the array
+		System.out.println(numbers.length);
+
+//		Ask user to enter 5 numbers and store them using Arrays
+//		Add all the numbers and print the total of all numbers
+
+		Scanner scan = new Scanner(System.in);
+		int[] nums = new int[5];
+
+		System.out.println("Please enter five numbers: ");
+
+		nums[0] = scan.nextInt();
+		nums[1] = scan.nextInt();
+		nums[2] = scan.nextInt();
+		nums[3] = scan.nextInt();
+		nums[4] = scan.nextInt();
+
+		System.out.println(Arrays.toString(nums));
+
+		int total = nums[0] + nums[1] + nums[2] + nums[3] + nums[4];
+
+		System.out.println("Total is: " + total);
+
+//		Ask user to enter 5 numbers and store them using Arrays
+//		Add all the numbers and print the total of all numbers
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter five numbers: ");
+
+		int[] nums = {scan.nextInt(), scan.nextInt(), scan.nextInt(), scan.nextInt(), scan.nextInt()};
+
+		System.out.println(Arrays.toString(nums));
+
+		int total = nums[0] + nums[1] + nums[2] + nums[3] + nums[4];
+
+		System.out.println("Total is: " + total);
+
+//		Write a program that asks users to input a number up to 4
+//		Create a  roles array that holds following: Developer, Tester, Scrum Master, BA, Product Owner
+//		If user enters :
+//		0 →  it should print: you are a developer
+//		If 1 → tester
+//		If 2 → Scrum Master
+//		If 3 → BA
+//		If 4 → Product Owner
+//		Note: do not use if statement OR switch case. Utilize the array.
+
+		Scanner scan = new Scanner(System.in);
+
+		String[] roles = { "Developer", "Tester", "Scrum Master", "BA", "Product Owner" };
+
+		System.out.println("Please enter the number between 0 and 4: ");
+		int select = scan.nextInt();
+
+		if (select >= 0 && select <= 4) {
+			System.out.println("The selected role is: " + roles[select]);
+		} else {
+			System.out.println("Invalid input!");
+		}
+
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Please enter the five roles: ");
+
+		String[] roles = { scan.next(), scan.next(), scan.next(), scan.next(), scan.next() };
+
+		System.out.println("Please enter the number between 0 and 4: ");
+		int select = scan.nextInt();
+
+		if (select >= 0 && select <= 4) {
+			System.out.println("The selected role is: " + roles[select]);
+		} else {
+			System.out.println("Invalid input!");
+		}
+
+		// To print the content of an array, we use Arrays.toString()
+		int[] nums = { -5, 2, 23, -10 };
+		System.out.println(Arrays.toString(nums));
+
+		// Sorting an array
+		Arrays.sort(nums); // This is actually going to change the original array and order its elements.
+		System.out.println(Arrays.toString(nums));
+
+		String[] cities = { "Moscow", "DC", "Cairo", "Baku" };
+		Arrays.sort(cities);
+		System.out.println(cities);
+
+		cities = new String[] { "Moscow", "DC", "Cairo", "Baku", "madrid", "rome", "ankara" };
+		Arrays.sort(cities);
+		System.out.println(Arrays.toString(cities)); // According to the ASCII code, the lower-case letters come after
+														// the upper-case letters.
+
+		String[] things = { "cata", "cabb" };
+		Arrays.sort(things);
+		System.out.println(Arrays.toString(things)); // because b comes before t
+		
+// Arrays.equals()
+		int[] num = { -5, 2, 23, -10 };
+		int[] numbers = { -5, 2, 23, -10 };
+
+		System.out.println(num == numbers); // false
+		System.out.println(Arrays.equals(num, numbers)); // true
+
+		String[] cities = { "Moscow", "DC", "Cairo", "Baku" };
+		String[] capitals = { "Moscow", "DC", "Cairo", "Baku" };
+		System.out.println(Arrays.equals(cities, capitals));
+
+		// Arrays
+		int[] num = { -5, 2, 23, -10 };
+		System.out.println(Arrays.toString(num));
+
+		int[] numbers = Arrays.copyOf(num, 0);
+		System.out.println(Arrays.toString(numbers));
+		
+		// Arrays.copyOf()
+		int[] num = { -5, 2, 23, -10 };
+		System.out.println(Arrays.toString(num));
+
+		// Why do not we just say numbers = num?
+		
+		int[] numbers = num;
+		System.out.println(Arrays.toString(numbers));
+		
+		numbers[0] = -1000;
+		
+		System.out.println(Arrays.toString(num));
+		System.out.println(Arrays.toString(numbers));
+		
+		System.out.println(num.hashCode());
+		System.out.println(numbers.hashCode());
+		
+		// Arrays.copyOf()
+		int[] num = { -5, 2, 23, -10 };
+		System.out.println(Arrays.toString(num));
+
+		int[] numbers = Arrays.copyOf(num, num.length);
+		System.out.println(Arrays.toString(numbers));
+
+		// Now only numbers will change.
+		numbers[0] = -1000;
+		System.out.println(Arrays.toString(num));
+		System.out.println(Arrays.toString(numbers));
+
+		System.out.println(num.hashCode());
+		System.out.println(numbers.hashCode());
+		
+//Multi-Dimensional Arrays
+//22/11/2022
+		// copyOf()
+		
+		int[] array = { 1, 2, 3, 4, 5 };
+
+//		int[] tempArray = new int[10];
+//		
+//		tempArray[0] = array[0];
+//		tempArray[1] = array[1];
+//		tempArray[2] = array[2];
+//		tempArray[3] = array[3];
+//		tempArray[4] = array[4];
+//		
+//		array = tempArray;
+		
+		array = Arrays.copyOf(array, 10);
+		
+		System.out.println(Arrays.toString(array));
+		
+		
+		// A two dimensional array is basically an "Array of Arrays"
+		
+		         // Cols:  0    1   2
+		int[][] array = { {10, 20, 30},    // row 0
+						  {40, 50, 60},    // row 1
+						  {70, 80, 90} };  // row 2
+
+		// The format above is for us, but java sees the array as follows:
+		int[][] nums = {{10, 20, 30}, {40, 50, 60}, {70, 80, 90} };
+
+
+		// Always the indices are [row][column] -- Why? Array of arrays.
+		System.out.println(array[1][2]);
+		
+		
+		   // columns             0          1             2
+		String[][] veggies = {{"Tomtao", "Cucumber", "Eggplant"},     // row 0
+							  {"Potato", "Cauliflower", "Spinach"}};  // row 1
+
+		System.out.println(veggies[1][2]);
+		
+		// A two dimensional array is basically an "Array of Arrays"
+		
+		int[][] nums = new int[3][4];
+		
+		// Row 0
+		nums[0][0] = 10;
+		nums[0][1] = 20;
+		nums[0][2] = 30;
+		nums[0][3] = 40;
+
+		// Row 1
+		nums[1][0] = 50;
+		nums[1][1] = 60;
+		nums[1][2] = 70;
+		nums[1][3] = 80;
+
+		// Row 2
+		nums[2][0] = 10;
+		nums[2][1] = 20;
+		nums[2][2] = 30;
+		nums[2][3] = 40;
+		
+		
+//		System.out.println(nums[1][4]); // error
+		System.out.println(nums[1][2]); // 70
+		
+		// NOTES:
+
+		// Note 1: Similar to the one-dimensional array, you can declare a two
+		// dimensional array as follows
+//		int[][] numbers = new int[3][4];
+		int nums[][] = new int[10][10];
+
+		// Note 2: Since the two-dimensional array is an array of arrays, you can
+		// actually declare each array independently and of different size.
+		
+		// This kind of arrays is called a ragged array
+		String[][] fruits = {{"Apple", "Banana", "Orange"},
+							{"Pineapple"},
+							{"Peach", "Kiwi"}};
+		
+//		System.out.println(fruits[1][2]); // error
+		System.out.println(fruits[2][1]);
+		
+		
+		// Given the above, now we know that we can declare an array as follows:
+		
+		int[][] values = new int[5][];
+
+		System.out.println("I like " + fruits[2][1] + "!!");
+		
+		
+		System.out.println(Arrays.toString(fruits));
+		
+		
+		String arr1[] = {"Apple", "Pear"};
+		
+		String arr2[] = {"Mango", "Banana", "Kiwi"};
+		
+		
+		String[][] fruits = {arr1,
+							 arr2};
+		
+		System.out.println(Arrays.deepToString(fruits));
+		
+		String arr1[] = {"Apple", "Pear"};
+		String arr2[] = {"Mango", "Banana", "Kiwi"};
+		String[][] fruits = {arr1,
+							 arr2};
+		
+		System.out.println(Arrays.deepToString(fruits));
+		
+		System.out.println(fruits[0]);
+		System.out.println(Arrays.toString(fruits[0]));
+		
+		System.out.println(Arrays.toString(fruits[1]));
+		System.out.println(fruits[1][2]);
+		
+		String arr1[] = { "Apple", "Pear" };
+		String arr2[] = { "Mango", "Banana", "Kiwi" };
+		String[][] fruits = { arr1, arr2 };
+
+		System.out.println(fruits.length); // returns the number of rows
+
+		System.out.println(fruits[0].length);
+		System.out.println(fruits[1].length);
+//		System.out.println(fruits[2].length); // error
+
+		String[][] names = new String[4][];
+
+		System.out.println(Arrays.deepToString(names));
+
+		names[0] = new String[] { "Ali", "Amy", "Sara" };
+		names[1] = new String[] { "John", "Tom" };
+		names[2] = new String[] { "Stewart" };
+
+		names[3] = new String[5];
+		names[3][0] = "Trump";
+		names[3][1] = "Steven";
+		names[3][2] = "Biden";
+		names[3][3] = "Obama";
+		names[3][4] = "Clinton";
+		
+		System.out.println(Arrays.deepToString(names));
+				
+		Arrays.sort(names[0]);
+		Arrays.sort(names[1]);
+		Arrays.sort(names[2]);
+		Arrays.sort(names[3]);
+		
+		System.out.println(Arrays.deepToString(names));
+		
+//		Declare and create a two-dimensional array of strings named colors. 	
+//		Put the colors ("red", "yellow", "blue") in the first row, and the colors ("orange", "green", "purple") in the second row.Print: My favorite color is purple
+//		Change value of yellow to pink
+//		Print: My favorite color is pink
+
+		String[][] colors = { { "red", "yellow", "blue" }, 
+					          { "orange", "green", "purple" } };
+		System.out.println("My favorite color is " + colors[1][2]);
+		colors[0][1] = "pink";
+		System.out.println("My favorite color is " + colors[0][1]);
+		
+int [][] table= {{1,4,9},{11,4,3},{2,2,3},{5,8,4}};
+	//	int sum = Arrays.stream(table[1]).sum();
+	//	System.out.println(sum);
+		System.out.println(Arrays.stream(table[1]).sum());
+		System.out.println(table.length);
+		System.out.println(table[0].length);
+
+		String[][] credentials = { {"user1@email.com", "pass1"},
+								   {"user2@gmail.com", "pass2"}};
+		
+		
+		System.out.println("Open website, click sign in, click sign in, find email box, post " + credentials[0][0]);
+		System.out.println("find the password box, and post " + credentials[0][1]);
+		
+
+		System.out.println("Open website, click sign in, click sign in, find email box, post " + credentials[1][0]);
+		System.out.println("find the password box, and post " + credentials[1][1]);
+		
+		// for Loop --> for a specific number of times, repeat the code in the block
+
+		// Initialize Counter ; condition ; update the counter
+		int i;
+		for (i = 0; i < 5; i++) {
+			// The body of the for loop - Will repeat as long as the condition is met.
+			System.out.println("Hello");
+			System.out.println(i);
+		}
+
+		System.out.println(i); // 5
+		
+		for (int i = 0; i < 7; i++) {
+			System.out.println("meow");
+		}
+
+		for (int i = 1; i <= 10; i++) {
+			System.out.println("I'm counting " + i);
+		}
+		
+
+// Loops & If & Arrays
+		// Notes:
+
+		// Note 1: No ; after the for loop header --> It will not loop
+
+		for (int i = 0; i < 10; i++)
+			;
+		{
+			System.out.println("Hello"); // This will run only once
+		}
+
+		// Note 2: Similar to the if statement, if you have a single line in the body of
+		// the for loop, you can remove the {}
+		for (int i = 0; i < 10; i++)
+			System.out.println("Welcome!");
+		// But it is always better to add the {} because it makes your code more
+		// readable.
+
+		// Note 3: You can increment or decrement as you update the counter
+		for (int i = 10; i >= 0; i--) {
+			System.out.println(i);
+		}
+
+		// Note 4: You can increment and decrement with any step size, does not have to
+		// be one
+		for (int i = 0; i < 20; i += 2) {
+			System.out.println("i = " + i);
+		}
+
+		// Note 5: Every part of the for loop header is optional except for the two
+		// semicolons ;;
+//		for ( ; ; ) {
+//			System.out.println("To infinity....");
+//		}
+
+		// Note 6: Following the above note, we can also write the for loop as follows
+		int j = 0;
+
+		for (; j < 10;) {
+			System.out.println("j = " + j);
+			j++;
+		}
+		// Even though you can do that, you should not write a for loop like that. It
+		// looks ugly!
+
+		// Note 7: You can use ++i, i++, --i, i-- --> It does not make a difference -->
+		for (int i = 0; i < 20; ++i) {
+			System.out.println(i);
+		}
+		// Why? --> Because Java runs this step after executing the body of the for loop
+		// as a separate line.
+
+		// You can have as many counters, conditions, updates as you wish.
+		for (int k = 0, m = 10; k <= 5 && m >= 5; k++, m--) {
+			System.out.println("k = " + k + " --- m = " + m);
+		}
+		
+		// Write a program to print numbers from 1 to 10.
+
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(i);
+		}
+
+		// Write a program to calculate the sum of first 10 natural number.
+
+		int total = 0;
+
+		// i
+		// total = total + 1; // 1
+		// total = total + 2; // 1+2 = 3
+		// total = total + 3; // 1+2 = 3
+
+		for (int i = 1; i <= 10; i++) { // We can write the condition as i < 11
+			total = total + i;
+		}
+
+		System.out.println("Total is: " + total);
+		
+		
+		// You can have a complex code within the body of the loop.
+		for (int i = 1; i <= 10; i++) {
+
+			// Any complex code you can think of
+			if (i % 2 == 0) {
+				System.out.println(i + " is even");
+			} else {
+				System.out.println(i + " is odd");
+			}
+		}
+		
+		// Code by: Jahangir
+		int i;
+		int sum = 0;
+		int maxLimit = 5;
+
+		for (i = 1; i <= maxLimit; i++) {
+			if (i < maxLimit) { // equivalent to: i <= maxLimit - 1
+				System.out.print(i + " + "); // This is used to print the String to the left of the = sign.
+			} else {
+				System.out.print(i);
+			}
+			sum = sum + i; // This where the math is happening
+		}
+
+		System.out.println(" = " + sum);
+		
+		// Code by: Jahangir
+		int i;
+		int sum = 0;
+		int maxLimit = 5;
+		String prob = "";
+
+		for (i = 1; i <= maxLimit; i++) {
+			prob += i + " + ";
+
+			sum = sum + i; // This where the math is happening
+		}
+
+		System.out.println(prob.substring(0, prob.length() - 3) + " = " + sum);
+		
+//		 Write a program to print increments of 5 from 0 to 100.
+//		 To practice, please use if statements
+
+		// Method 1
+//		for (int i = 0; i <= 100; i += 5) {
+//			System.out.println(i);
+//		}
+
+		// Method 2
+
+		for (int i = 0; i <= 100; i++) {
+			if (i % 5 == 0) { // Only if i is divisible by 5
+				System.out.println(i);
+			}
+		}
+		
+
+//		Write a program to ask user enter 5 numbers
+//		Print the total of numbers entered by user that are greater than 10
+//		Example: user enters: 3, 5, 15, 21, 6
+//		Your program should output: 36 (total of 15+21)
+
+		Scanner scan = new Scanner(System.in);
+
+		int total = 0;
+		int num;
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println("Please enter a number: ");
+			num = scan.nextInt();
+
+			// Should I add the number to the container or not?
+			if (num > 10) {
+				total = total + num;
+			} // Else, do not do anything, move on to the next iteration
+		}
+
+		System.out.println("The total is: " + total);
+		
+//		Write a program to ask user enter 5 numbers
+//		Print the total of numbers entered by user that are greater than 10
+//		Example: user enters: 3, 5, 15, 21, 6
+//		Your program should output: 36 (total of 15+21)
+
+		// What if we want to store the inputs of the user?
+
+		Scanner scan = new Scanner(System.in);
+
+		int total = 0;
+		int num[] = new int[5];
+
+		for (int i = 0; i <= 4; i++) {
+			System.out.println("Please enter a number: ");
+			num[i] = scan.nextInt();
+
+			// Should I add the number to the container or not?
+			if (num[i] > 10) {
+				total = total + num[i];
+			} // Else, do not do anything, move on to the next iteration
+		}
+
+		System.out.println("The total is: " + total);
+		System.out.println(Arrays.toString(num));
+
+	}
+	
+	
+		// Arrays and Loops
+		// index          0   1  2  3   4
+		int[] numbers = { 5, -1, 2, 25, -100, 55, 62 };
+		System.out.println(Arrays.toString(numbers));
+
+		// A loop's counter can be used as the index of the elements in the array.
+		for (int i = 0 ; i < numbers.length; i++) {
+			System.out.println(numbers[i]);
+		}
+		
+		int[] numbers = { 5, -1, 2, 25, -100, 55, 62 };
+
+		// Let's implement the same behavior of Arrays.toString()
+		System.out.print("[");
+		for (int i = 0; i < numbers.length; i++) {
+			if (i < numbers.length - 1) {
+				System.out.print(numbers[i] + ", ");
+			} else {
+				System.out.print(numbers[i] + "]");
+			}
+		}
+
+		System.out.println();
+
+		System.out.println(Arrays.toString(numbers));
+		
+// In Class Task - My version
+int limit=10;
+		int total=0;
+		System.out.println("Please enter 5 numbers: ");
+		int[] num= {scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt()};	
+		System.out.print("You entered: ");	
+		System.out.println(Arrays.toString(num));
+		for(int i = 0; i<=num.length-1; i++) {
+		     	if (num[i]>limit) {
+		        System.out.println(num[i]);
+		        total=total+num[i];
+		     	}
+		    }
+	System.out.println("Total of numbers greater than 10 is: " +total);
+	
+			// split - splits the String into Strings and returns them in a single array of
+		// Strings
+
+		String quote = "Many of life's failures are people who did not realize how close they were to success when they gave up";
+
+		String[] quoteSliced = quote.split(" "); // Delimiter is the space - word by word
+		quoteSliced = quote.split(""); // empty string --> letter by letter
+		quoteSliced = quote.split("they");
+
+		System.out.println(Arrays.toString(quoteSliced));
+
+		String num = "1654646546";
+		System.out.println(Arrays.toString(num.split("")));
+		
+//In Class Task - Sentence reverse My version
+String sent="Ain't nobody got time for that";
+		String[] sentSliced=sent.split(" ");
+		System.out.println(Arrays.toString(sentSliced));
+		
+		for(int i = sentSliced.length-1; i>=0; i--) {
+			System.out.println(sentSliced[i]);
+		     }
+	
+//My Dynamic Sentence Reverser
+String sent=scan.nextLine();		
+		String[] sentSliced=sent.split(" ");
+		System.out.println(Arrays.toString(sentSliced));
+		
+		for(int i = sentSliced.length-1; i>=0; i--) {
+			System.out.print(sentSliced[i]+ " ");	
+	
+//In class Task - Number of gmails
+String emailAddresses = "omar@gmail.com, michelle@yahoo.com, ahmed@hotmail.com, stacy@gmail.com, carlos@gmail.com";
+		int count = 0;
+		String emails[] = emailAddresses.split(", ");
+		for (int i = 0; i < emails.length; i++) {
+			if (emails[i].contains("gmail.com")) {
+				count = count+1;
+			}		
+		}
+		System.out.println(count + " people have gmail.address");	
+
+	
+//		Given a String variable sentence, write code to type each word in separate lines in a reverse order. 
+//		Example sentence -> "Ain't nobody got time for that"
+//		Output:
+//		that
+//		for 
+//		time 
+//		got
+//		nobody
+//		Ain't  
+
+		// length          <--------------6------------->              
+		//  index            0     1     2   3    4   5 (words.length - 1)   
+		String sentence = "Ain't nobody got time for that";
+
+		// split into words
+		String[] words = sentence.split(" ");
+
+		// Remember:
+		// < words.length --->    <6 = 5
+		// <= words.length - 1  ----> <= 5
+		
+		// Reverse the order
+//		for (int i = 0; i <= words.length - 1; i++) {
+//			System.out.println(words[i]);
+//		}
+
+		for (int i = words.length - 1; i >= 0; i--) {
+			System.out.println(words[i]);
+		}
+		
+		Scanner scan = new Scanner(System.in);
+		String sent = scan.nextLine();
+		
+		String[] sentSliced = sent.split(" ");
+		
+		System.out.println(Arrays.toString(sentSliced));
+
+		for (int i = sentSliced.length - 1; i >= 0; i--) {
+			System.out.print(sentSliced[i] + " ");
+		}
+		
+		Scanner scan = new Scanner(System.in);
+		String sent = scan.nextLine();
+
+		String[] sentSliced = sent.split(" ");
+
+		System.out.println(Arrays.toString(sentSliced));
+
+		for (int i = sentSliced.length - 1; i >= 0; i--) {
+			System.out.print(sentSliced[i] + " ");
+		}
+		
+		String sent = "Ain't nobody got time for that";
+		String[] sentSliced = sent.split(" ");
+
+		// Storing the reversed String into another String
+		String reversedSent = ""; // Initialize to an empty String
+
+		for (int i = sentSliced.length - 1; i >= 0; i--) {
+			reversedSent = reversedSent + sentSliced[i] + " ";
+		}
+
+		System.out.println(reversedSent);
+		
+        //               0    1      2    3   4   5
+		String sent = "Ain't nobody got time for that";
+		String[] sentSliced = sent.split(" ");
+		//  0 1 2 3 4 5   <--  i
+		// [ , , , , , ]
+		
+		// Storing the reversed String into an array
+		String[] reversedSent = new String[sentSliced.length];
+		//  0 1 2 3 4 5   --> j
+		// [ , , , , , ]
+
+		// reversedSent[0] = sentSliced[5];
+		// reversedSent[1] = sentSliced[4];
+		// reversedSent[2] = sentSliced[3];
+		// reversedSent[3] = sentSliced[2];
+		// reversedSent[4] = sentSliced[1];
+		// reversedSent[5] = sentSliced[0];
+		
+		for (int i = sentSliced.length - 1, j = 0 ; i >= 0 ; i--, j++) {
+			reversedSent[j] = sentSliced[i];
+		}
+
+		System.out.println(Arrays.toString(reversedSent));
+		
+		String sent = "Ain't nobody got time for that";
+		String[] sentSliced = sent.split(" ");
+
+		// Storing the reversed String into an array
+		String[] reversedSent = new String[sentSliced.length];
+
+		int j = 0;
+
+		for (int i = sentSliced.length - 1; i >= 0; i--) {
+			reversedSent[j] = sentSliced[i];
+			j++;
+		}
+
+		System.out.println(Arrays.toString(reversedSent));
+		
+//		You have a string of email addresses
+//		String emailAddresses = "omar@gmail.com, michelle@yahoo.com, ahmed@hotmail.com, stacy@gmail.com, carlos@gmail.com"	
+//		This list can be changed in future, new people might be added or removed
+//		Find out how many people have gmail.com address
+
+		String emailAddresses = "omar@gmail.com, michelle@yahoo.com, ahmed@hotmail.com, stacy@gmail.com, carlos@gmail.com";
+
+		String[] emails = emailAddresses.split(", ");
+
+		int gmailCounter = 0;
+
+		for (int i = 0; i < emails.length; i++) {
+//			if (emails[i].contains("gmail.com")) {
+			if (emails[i].endsWith("gmail.com")) {
+				gmailCounter++;
+			}
+		}
+
+		System.out.println("The number of gmails is: " + gmailCounter);
+		
+//While Loop - Password
+String correctPassword = "Desk45";
+		System.out.println("Please enter your password: ");
+		String userEnteredPassword = scan.next();
+		
+		while (!correctPassword.equals(userEnteredPassword)) {
+		System.out.println("Incorrect Password. Please try again: ");
+		userEnteredPassword = scan.next();
+		}
+				System.out.println("Welcome");
+				
+
+	
+	
+	
